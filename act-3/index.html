@@ -295,33 +295,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../act-1/" class="md-nav__link">
         
   
@@ -449,32 +422,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        前置條件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        預期畫面與證據
+        步驟
       
     </span>
   </a>
@@ -493,10 +444,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -504,10 +455,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        疑難排解
       
     </span>
   </a>
@@ -563,61 +514,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -648,304 +545,17 @@
 
 
 <h1 id="act-3讓它更好">Act 3：讓它更好<a class="headerlink" href="#act-3讓它更好" title="Permanent link">¶</a></h1>
-<p><strong>Make it better</strong> · 用同一份評分表（scorecard），衡量一次只改一件事的實驗。</p>
-<p><strong>業務問題：更快或更省，是否讓團隊多花時間重新查核？</strong> 對照設備維護資訊助理，漏掉重要限制的回答，不會因模型便宜就更值得採用。本幕用相同條件比較品質、回應效率與用量，讓取捨有依據。</p>
-<div id="這一幕的目標" class="anchor-alias"></div>
-
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>審閱 <strong>Rubric Evaluator</strong> 根據探索證據產生、且由講師凍結版本的評分表；用相同課堂題組比較 v1 與 <strong>Model Router</strong> v2。本場不執行模型微調或 Quality Router。</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>本幕安排</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>現場主線</td>
-<td><strong>學員操作 · 必做</strong>：審查評分表，核對 v1／v2 比較，提出保留或不採用的理由。</td>
-</tr>
-<tr>
-<td>閱讀與觀察位置</td>
-<td>教材、獲授權的 Microsoft Foundry Evaluations 與講師交付的比較輸出。</td>
-</tr>
-<tr>
-<td>原指令執行位置</td>
-<td>主要 Ubuntu VM 的第二場專用 Terminal、第二場專案根目錄，指定本組環境。</td>
-</tr>
-<tr>
-<td>時間</td>
-<td>依講師排程；雲端完成時間不作保證，逾時使用已驗證的本組預跑結果。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">前置條件<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<div class="admonition important">
-<p class="admonition-title">比較契約要固定</p>
-<p>保持相同的 <strong>Testing 題目、重複次數、評分表版本與評分模型（judge）</strong>。本場 v2 相對 v1 只改模型選擇。課堂使用 <code>classroom</code> 六題一次；不能直接對比 <code>full</code> 的 24 題三次。詳見<a href="../getting-started/#cohorts">題量與公平比較</a>。</p>
-</div>
-<p>已備妥 <a href="../act-2/">Act 2</a> 的可驗證證據、凍結評分表與本次實際版本，並符合<a href="../getting-started/#readiness">課堂操作放行條件</a>。版本不符的 Router 結果須隔離；未證明回應實際使用正確版本前，不將 v2 列為可比較結果。</p>
-<div class="admonition warning">
-<p class="admonition-title">需授權／可能計費</p>
-<p>評分表草擬、評分與模型部署都可能產生費用。先確認 <a href="../act-2/">Act 2</a> 的追蹤記錄與 Insights 已備妥，再由有權限的操作者從本場專案根目錄執行。</p>
-</div>
-<h2 id="steps">操作步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="學員操作--必做">學員操作 · 必做<a class="headerlink" href="#學員操作--必做" title="Permanent link">¶</a></h3>
-<ol>
-<li><strong>審閱評分依據。</strong> 在本組 Foundry 的 <strong>Evaluations → Evaluators</strong> 開啟講師交付的 evaluator ID 與版本，不只憑名稱判斷。評分檢視者將政策、查證、金額與誠實揭露面向各對應到業務指引或有效的 Insights／追蹤證據；缺少依據時先記錄，不自行改評分表。</li>
-<li><strong>取得同一條件的結果。</strong> 本組放行後，當輪操作者依 Step 6–7 取得六題一次的 v1／v2 評估；其餘組員核對題組、評分表、評分模型與回應實際版本。工作未完成或版本不符時停下來，不重送以補出比較表。</li>
-<li><strong>寫下採用理由。</strong> 紀錄者使用 Step 9 的<a href="#comparison-record">比較紀錄</a>，留下品質、最弱面向、延遲、Token 用量與來源。每人提出一個支持或反對採用 v2 的證據；本幕不切換共用端點。</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">以下命令僅供已放行本組的當輪操作者執行</p>
-<p>未放行時只閱讀可驗證的本組匯出結果，不執行新的評分或部署，也不使用已隔離的結果。六題流程的本機測試不解除來源、Client 與線上驗證門檻。</p>
-</div>
-<h3 id="step-5建立-rubric-evaluator-scorecard">Step 5．審閱已凍結的評分表<a class="headerlink" href="#step-5建立-rubric-evaluator-scorecard" title="Permanent link">¶</a></h3>
-<p>講師課前根據以下來源草擬本組 Rubric Evaluator，再人工審核並凍結版本；學員不各自重新生成：</p>
-<ul>
-<li>v1 的實際 Exploring 追蹤記錄與 Agent 資訊。</li>
-<li>Exploring 題目及理想回答的樣貌。</li>
-<li><code>data/scorecard-guidance.json</code> 的業務指引。</li>
-<li>Act 2 儲存的 Insights 分析發現。</li>
-</ul>
-<p>Testing 的答案與預期結果不用於草擬評分表。可註冊 Testing 題集供後續評分，但不能因比較結果不理想就修改評分表，再沿用舊分數。</p>
-<h4 id="審查草稿不要只接受名稱">審查草稿，不要只接受名稱<a class="headerlink" href="#審查草稿不要只接受名稱" title="Permanent link">¶</a></h4>
-<p>讀取講師交付的本組評分表唯讀副本，記下 evaluator ID、版本、通過門檻與 <code>gpt-5-mini</code> 評分模型，確認每個面向都對應 Caldova 真正在意的事：</p>
-<ul>
-<li>差旅政策判定正確。</li>
-<li>推薦前先查證。</li>
-<li>金額與幣別加總正確。</li>
-<li>誠實說明沒有找到、沒有完成或沒有足夠證據的部分。</li>
-</ul>
-<details class="note">
-<summary>原版畫面參考：評分表的草擬來源與審閱重點</summary>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/reference-scorecard-review.png" data-title="原版 Copilot 畫面裁切，說明從基準追蹤記錄、Agent、探索題與指引草擬評分表，並審閱評分面向" data-desc-position="bottom"><img alt="原版 Copilot 畫面裁切，說明從基準追蹤記錄、Agent、探索題與指引草擬評分表，並審閱評分面向" decoding="async" height="396" loading="lazy" src="../assets/images/reference-scorecard-review.png" width="640"></a></p>
-<p>來源：Microsoft 原始投影片第 26 頁，裁切保留說明面板，採 CC BY-SA 4.0。這不是本組的 Evaluations 截圖；面向數與門檻以本組凍結版本為準，不照圖重新生成。<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/delivery-resources/slides/Slide26.png">原始來源</a>。</p>
-</details>
-<p>不要以籠統的「有幫助」取代業務要求。如果評分表已存在，腳本會沿用，讓各個版本用相同方式評分。</p>
-<details class="note">
-<summary>Hosted Agent 的行為指示警告</summary>
-<p>Foundry 可能顯示：</p>
-<div class="highlight"><pre><span></span><code>Generated with input-quality warnings: The agent has no instructions.
-</code></pre></div>
-<p>原指南說明，Hosted Agent 的行為指示封裝在程式碼與設定中，Rubric Evaluator 無法直接讀取。腳本會改以提示來源（prompt source）傳入行為指示與政策。請檢查草稿內容是否符合需求，不要只為消除這項已知警告而重建；其他真正的失敗仍要排查。</p>
-</details>
-<h3 id="step-6評分-v1">Step 6．評分 v1<a class="headerlink" href="#step-6評分-v1" title="Permanent link">¶</a></h3>
-<p><strong>操作性質：付費模型擷取與線上評分。</strong> 先確認本輪沒有其他重工作，再提交一次：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span class="w"> </span>--label<span class="w"> </span>v1<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>本場課堂使用 <strong>6 道 Testing 題目、1 次評分</strong>，搭配本組固定的評分表版本與 <code>gpt-5-mini</code> 評分模型。這會產生模型與評分費用；擷取後的回答仍由線上服務評分，不是離線免費執行。</p>
-<p>Testing 使用其他題組沒有出現過的情境。先記下 v1 的分數，這才是往後比較的起點。</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>compare<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>確認有 v1 的實際結果、各難度與各評分面向，而不是只有成功提交工作的訊息。</p>
-<h3 id="step-7建立-model-router-v2並評分">Step 7．建立 Model Router v2，並評分<a class="headerlink" href="#step-7建立-model-router-v2並評分" title="Permanent link">¶</a></h3>
-<p><strong>操作性質：建立／沿用版本與付費評分。</strong> 先核對 v2 是否已交付及目前使用中版本，再由核准操作者接續；不把版本建立成功當成回應綁定已驗證。</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/08-model-router.sh<span class="w"> </span>--mode<span class="w"> </span>balanced<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span class="w"> </span>--label<span class="w"> </span>v2<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>行為指示相同，工具相同，<strong>唯一改變是模型的選擇</strong>：Balanced Router 只允許 GPT-5、GPT-5-mini、GPT-5-nano。先保留原本上線的版本，不帶 <code>--activate</code>。</p>
-<p>建立版本後還要核對真實回應的版本與執行階段證據；<code>--version</code> 參數、標籤或 CLI 成功都不足以證明實際綁定正確。缺少執行階段權限時，保留已記錄版本，請講師完成受控授權後再接續，不重複部署或自行授予資源群組權限。</p>
-<div id="選用-step-8fine-tuning-小型-model" class="anchor-alias"></div>
-
-<p>Step 7b 的 Quality Router 與 Step 8 的 fine-tuning 是<a href="../reference/resources-and-license/#original-extensions">原版延伸閱讀</a>，<strong>不在本場共用環境執行</strong>，也不要求產生 v2-quality、v2-alt 或 student 版本。</p>
-<h3 id="step-9比較然後決定">Step 9．比較，然後決定<a class="headerlink" href="#step-9比較然後決定" title="Permanent link">¶</a></h3>
-<p>以下讀取同一課堂評估題組的結果，不提交新的評分工作；入口仍會檢查本場交付條件：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>compare<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<h2 id="evidence">預期畫面與證據<a class="headerlink" href="#evidence" title="Permanent link">¶</a></h2>
-<p>原指南的比較包含兩張表：</p>
-<ul>
-<li><strong>整體表：</strong>平均分數、相對 v1 的變化、通過率、難度、最弱面向、延遲與 Token 用量。</li>
-<li><strong>面向表：</strong>各版本在評分表每個面向上的分數。</li>
-</ul>
-<h3 id="read-comparison">讀懂一列比較結果<a class="headerlink" href="#read-comparison" title="Permanent link">¶</a></h3>
-<p>先問「這些資料能比較嗎？」，再問「這個改版是否值得採用？」。以下對照實際比較表欄位，不提供假分數，也不將原版影片數字當成本組結果。</p>
-<table>
-<thead>
-<tr>
-<th>欄位</th>
-<th>看什麼</th>
-<th>對業務決策的意義</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Version／Agent</strong></td>
-<td>比較表前者是 v1／v2 等標籤，後者是紀錄的 Agent 版本號；仍須回查實際回應。</td>
-<td>v1 不一定等於實際版本 1；一列表格不是版本綁定正確的獨立證明。</td>
-</tr>
-<tr>
-<td><strong>Rows scored</strong></td>
-<td>已取得有效分數的回答數；核對預期題數、實際回答、有效評分與錯誤紀錄。</td>
-<td>本場完整的 <code>classroom</code> 是六題一次；缺漏先查來源，不因只留下成功樣本而宣稱改善。</td>
-</tr>
-<tr>
-<td><strong>Mean score</strong></td>
-<td>平均品質與相對基準的變化。</td>
-<td>平均較高不代表重要條件都守住，還要看分布與政策面向。</td>
-</tr>
-<tr>
-<td><strong>Pass rate</strong></td>
-<td>依本組固定評分依據判定通過的比例。</td>
-<td>與平均分數分開解讀；高平均也可能仍有不可接受的回答。</td>
-</tr>
-<tr>
-<td><strong>Weakest area</strong></td>
-<td>本次最弱面向及各面向分數。</td>
-<td>是否涉及事先約定的必要品質？不能讓少數高分掩蓋關鍵退步。</td>
-</tr>
-<tr>
-<td><strong>P50 s／P95 s</strong></td>
-<td>中間位置與較慢端的 Agent 回答延遲，不是評分工作的等待時間。</td>
-<td>看回應效率的取捨；六題樣本的 P95 不是正式服務 SLA 或吞吐驗證。</td>
-</tr>
-<tr>
-<td><strong>Avg agent tokens</strong></td>
-<td>Agent 回答的平均模型用量，不是評分模型或其他服務的總用量。</td>
-<td>用量不是美元帳單；必須結合實際模型、價格與其他服務費用。</td>
-</tr>
-</tbody>
-</table>
-<p>任何題組、重複次數、評分表、評分模型或實際版本不一致，都先停在資料核對。程式的完整性檢查不是省略查證的理由；入口阻擋時也不繞過檢查拼湊一張表。</p>
-<p>依序確認：</p>
-<ol>
-<li>差旅政策是否仍然正確？最弱的面向有沒有退步？</li>
-<li>提升是否在各輪與未見過的 Testing 題目上維持？</li>
-<li>只有品質維持時，再討論速度與成本。Token 數是用量，不是完整帳單。</li>
-<li>相較自己的起點，這一步是往上、往下，還是證據不足？</li>
-</ol>
-<p><strong>保留 v1 完全合理。</strong> Model Router 沒有勝出，是有用的結果，不是要藏起來的失敗。六題一次是課堂練習，樣本有限，不因此推論正式服務已全面改善。</p>
-<details class="tip">
-<summary>小組判讀：評分模型也可能判錯</summary>
-<p>使用<strong>已交付且獲准檢視</strong>的一筆回答、工具證據與判分理由，不另外提交工作：</p>
-<ol>
-<li>評分檢視者指出判分依據，證據檢視者對照實際工具結果與必要條件。</li>
-<li>記下「同意／有疑義／需要補資料」及理由；缺少判分理由就標記缺資料，不自行推測。</li>
-<li>有爭議不直接改分、換評分模型或排除不喜歡的答案。若確認規準需改，由負責人凍結新版本，再按既有放行流程讓各比較版本使用相同條件重評。</li>
-</ol>
-<p>多輪取樣不會把錯誤規準變正確；通過門檻也不等於所有政策都零違規。可以核對 Testing 的評分理由，但不要把答案回填行為指示或練習題來反覆刷分。</p>
-</details>
-<h3 id="cost-context">費用從哪裡來？<a class="headerlink" href="#cost-context" title="Permanent link">¶</a></h3>
-<p>Andre 關心的不是某一格用量變小，而是在品質條件下，整體取捨是否說得清楚。Router 即使用更多 Token，也可能因模型組合較便宜而降低推論費；反過來也可能成立，不能只看總 Token 數下結論。</p>
-<details class="note">
-<summary>展開：模型用量之外的費用組成</summary>
-<table>
-<thead>
-<tr>
-<th>費用來源</th>
-<th>為了做什麼</th>
-<th>比較表是否涵蓋？</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Agent 推論</td>
-<td>旅遊回答與工具使用過程中的模型呼叫。</td>
-<td>提供 Agent 用量線索，但仍要核對實際模型及輸入／輸出價格。</td>
-</tr>
-<tr>
-<td>評分、Insights 與 Agent Optimizer</td>
-<td>分析問題、產生／審閱規準、產生候選與評分。</td>
-<td>不包含在 <strong>Avg agent tokens</strong> 的完整成本中，須另記錄。</td>
-</tr>
-<tr>
-<td>BYOK 開發助手</td>
-<td>本組工程輔助、資料解讀與差異審查。</td>
-<td>與業務 Agent 的用量分開看。</td>
-</tr>
-<tr>
-<td>執行環境與映像</td>
-<td>Hosted Agent、Portal 運算，以及 ACR 建置與儲存。</td>
-<td>依資源與服務型態計費，不能因未送旅遊請求就推定全部為零。</td>
-</tr>
-<tr>
-<td>觀測與資料</td>
-<td>Application Insights／Log Analytics 的資料擷取、保留與儲存。</td>
-<td>不在 Agent 平均 Token 數內。</td>
-</tr>
-</tbody>
-</table>
-<p>這是費用範圍說明，不是本場估價單。沒有完整帳單、模型組合與使用條件，就不推算每人費用、節省百分比或 ROI；容量配額也不是實際用量。</p>
-</details>
-<h3 id="comparison-record">本組比較紀錄<a class="headerlink" href="#comparison-record" title="Permanent link">¶</a></h3>
-<p>下面是<strong>空白紀錄範本，不是已完成的實驗結果</strong>。請填在講師指定的受控位置；本站不儲存填寫內容，未執行與不可比較要分開記錄。</p>
-<table>
-<thead>
-<tr>
-<th>共同比較條件</th>
-<th>本輪填寫</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>本組與執行來源</td>
-<td>組別、環境、主要工作副本、執行 UTC 時間；註明現場或本組預跑。</td>
-</tr>
-<tr>
-<td>題集</td>
-<td><code>classroom</code>、固定六題、一次；記錄題目 IDs／題集雜湊。</td>
-</tr>
-<tr>
-<td>評分依據</td>
-<td>evaluator ID、評分表版本、通過門檻、<code>gpt-5-mini</code> 評分模型與擷取模式。</td>
-</tr>
-<tr>
-<td>來源證據</td>
-<td>擷取檔／評分結果位置、工作與 Response IDs；保留原始檔，不公開敏感追蹤記錄。</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>標籤</th>
-<th>實際版本、模型與行為指示雜湊</th>
-<th>品質與用量</th>
-<th>決策及理由</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>v1</td>
-<td>待本組填寫，不能只填標籤。</td>
-<td>待填平均分數、通過率、最弱面向、延遲與 Token 用量。</td>
-<td>待填；缺證據則標記尚未完成。</td>
-</tr>
-<tr>
-<td>v2</td>
-<td>待核對實際回應版本；隔離資料不列入。</td>
-<td>待填同一評估題組的結果。</td>
-<td>待填採用／保留／不可比較與理由。</td>
-</tr>
-<tr>
-<td>v3（Act 4）</td>
-<td>待填有效候選來源、起始版本與新版本。</td>
-<td>待填相同六題一次的結果。</td>
-<td>待填人工審查與重測後的決策。</td>
-</tr>
-</tbody>
-</table>
-<details class="note">
-<summary>情境插畫：由人檢查變更</summary>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/travel-workshop-02-instructions-diff-review.png" data-title="情境插畫：由人檢查基準版本與候選方案的行為指示差異" data-desc-position="bottom"><img alt="情境插畫：由人檢查基準版本與候選方案的行為指示差異" class="narrative-illustration" decoding="async" height="941" loading="lazy" src="../assets/images/travel-workshop-02-instructions-diff-review.png" width="1672"></a></p>
-<p>插畫不是實際差異畫面或已完成評估；本組紀錄須連回真實來源。</p>
-</details>
-<details class="tip">
-<summary>詢問 Copilot：把比較說成 hill climbing</summary>
-<div class="highlight"><pre><span></span><code>以下是 bash infra/07-score.sh compare 的實際輸出：[貼上去識別化內容]。
-請先確認評估題組、題數、重複次數、評分表、評分模型與回應實際版本相符，
-再比較 v2 相對 v1 的品質、政策、延遲與用量。
-哪一步值得保留？哪些變化可能是雜訊？不要預設較小的模型一定更划算。
-</code></pre></div>
-</details>
-<p>本幕先形成比較與建議，不切換共用端點。版本綁定不符、評分未完成或資料不一致時，記錄「不可比較」並停止；是否上線在 <a href="../act-4/">Act 4</a> 依證據與授權決定。</p>
+<p>用同一份評分表（scorecard），衡量一次只改一件事的實驗，並保留有證據的進步。審閱 <strong>Rubric Evaluator</strong> 根據探索證據產生、且由講師凍結版本的評分表；用相同課堂題組比較 v1 與 <strong>Model Router</strong> v2。本場不執行模型微調或 Quality Router。</p>
+<h3 id="這一步在-hill-climbing-的位置">這一步在 hill climbing 的位置<a class="headerlink" href="#這一步在-hill-climbing-的位置" title="Permanent link">¶</a></h3>
+<p>這一步的業務意義，是支援「是否值得採用」的討論；不是把速度、Token 用量或平均分數的排名直接當成營運價值。</p>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1審閱評分依據">1．審閱評分依據。<a class="headerlink" href="#1審閱評分依據" title="Permanent link">¶</a></h3>
+<p>在本組 Foundry 的 <strong>Evaluations → Evaluators</strong> 開啟講師交付的 evaluator ID 與版本，不只憑名稱判斷。評分檢視者將政策、查證、金額與誠實揭露面向各對應到業務指引或有效的 Insights／追蹤證據；缺少依據時先記錄，不自行改評分表。</p>
+<h3 id="2取得同一條件的結果">2．取得同一條件的結果<a class="headerlink" href="#2取得同一條件的結果" title="Permanent link">¶</a></h3>
+<p>本組放行後，當輪操作者取得六題一次的 v1／v2 評估；其餘組員核對題組、評分表、評分模型與回應實際版本。工作未完成或版本不符時停下來，不重送以補出比較表。</p>
+<h3 id="3寫下採用理由">3．寫下採用理由<a class="headerlink" href="#3寫下採用理由" title="Permanent link">¶</a></h3>
+<p>使用比較紀錄，留下品質、最弱面向、延遲、Token 用量與來源。每人提出一個支持或反對採用 v2 的證據；本幕不切換共用端點。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
 <p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
@@ -955,6 +565,8 @@ bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span cl
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已記下採用、保留或證據不足的理由；沒有將被隔離的 Router 結果列入比較。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 未把 Token 用量當成完整費用，也未把未執行的選做實驗當成自己的分數。</li>
 </ul>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p>進入：<a href="../act-4/">Act 4：擴大改善規模</a>。</p>
 <h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -979,12 +591,6 @@ bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span cl
 </tbody>
 </table>
 <p>詳細處理方式見<a href="../reference/troubleshooting/">疑難排解</a>。</p>
-<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
-<h3 id="這一步在-hill-climbing-的位置">這一步在 hill climbing 的位置<a class="headerlink" href="#這一步在-hill-climbing-的位置" title="Permanent link">¶</a></h3>
-<p>我們建立高度計、衡量起點、走了一個可比較的單步，並只保留有證據的進步。下一幕讓 Agent Optimizer 多嘗試幾步，但人仍然負責決定。</p>
-<p>這一步的業務意義，是支援「是否值得採用」的討論；不是把速度、Token 用量或平均分數的排名直接當成營運價值。</p>
-<p><strong>下一步：<a href="../act-4/">Act 4：擴大改善規模</a>。</strong></p>
-<p><em>教學脈絡改編自<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/instructions/README.md#act-3-make-it-better">原指南 Act 3</a>。本場採六題一次的課堂比較；失敗時看<a href="../reference/troubleshooting/">疑難排解</a>，不自行改模型、擴權或清理共用資源。</em></p>
 
 
 
@@ -1020,7 +626,7 @@ bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span cl
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

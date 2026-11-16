@@ -295,33 +295,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../act-1/" class="md-nav__link">
         
   
@@ -476,32 +449,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        前置條件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        預期畫面與證據
+        步驟
       
     </span>
   </a>
@@ -520,10 +471,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -531,10 +482,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        疑難排解
       
     </span>
   </a>
@@ -563,61 +514,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -648,187 +545,15 @@
 
 
 <h1 id="act-4擴大改善規模">Act 4：擴大改善規模<a class="headerlink" href="#act-4擴大改善規模" title="Permanent link">¶</a></h1>
-<p><strong>Make it scale</strong> · Agent Optimizer 負責嘗試，人負責審查與決定。</p>
-<p><strong>業務問題：需求或模型改變時，如何加快改善，又不失去人的掌控？</strong> 對照設備維護資訊助理，變更要能說明理由，結果要能重新核對。本幕擴大的是改善流程，不是宣稱已完成流量擴展、壓力測試或高可用驗證。</p>
-<div id="這一幕的目標" class="anchor-alias"></div>
-
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>讓 <strong>Agent Optimizer</strong> 提出 Agent 行為指示（instructions）的調整，用練習題（practice）挑選候選方案（candidate），再用相同 Testing 題組重新驗證。自動化不應跳過人工審查，也不應讓未驗證的版本意外上線。</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>本幕安排</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>現場主線</td>
-<td><strong>學員操作 · 必做</strong>：審查候選方案的行為指示，以練習題／Testing 證據提出人工決策。</td>
-</tr>
-<tr>
-<td>閱讀與觀察位置</td>
-<td>教材、獲授權的 Microsoft Foundry Optimize，以及講師提供的差異畫面與評分。</td>
-</tr>
-<tr>
-<td>原指令執行位置</td>
-<td>主要 Ubuntu VM 的第二場專用 Terminal、第二場專案根目錄，指定本組環境。</td>
-</tr>
-<tr>
-<td>時間</td>
-<td><strong>待講師試跑確認</strong>；雲端工作的等待與現場閱讀、討論分開。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">前置條件<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<div class="admonition important">
-<p class="admonition-title">練習題分數不是最終證明</p>
-<p>Agent Optimizer 使用 Exploring 中的 <strong>12 道練習題</strong>。本場課堂以 <strong>6 道 Testing 題目、1 次評估</strong>與固定評分表，比較候選方案和起點；課前完整評估的 24 題三次另列，不能混比。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">需授權／可能計費</p>
-<p>本幕需要 <a href="../act-3/">Act 3</a> 的評分表、基準版本（baseline）分數與選定的起始標籤。Agent Optimizer、部署與重新評分可能計費；取得授權後，從本場專案根目錄執行。</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">未放行不提交；沒有有效候選就停在證據審查</p>
-<p>本組須依<a href="../getting-started/#readiness">課堂操作放行條件</a>取得明確授權。取消、失敗或狀態不明的工作，不因教材公開就能再次提交。沒有有效候選就記錄「尚未完成」，不拿原版畫面或被取消工作的候選冒充可發布結果。</p>
-</div>
-<h2 id="steps">操作步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="學員操作--必做">學員操作 · 必做<a class="headerlink" href="#學員操作--必做" title="Permanent link">¶</a></h3>
-<ol>
-<li><strong>核對本輪工作。</strong> 在本組 Foundry 的 <strong>contoso-travel → Optimize</strong> 或已交付的 <code>status</code> 輸出中，證據檢視者核對起始標籤／實際版本、工作 ID、12 道練習題、評分表與完成狀態。取消、失敗或狀態不明就記錄並停止，不因看到候選方案名稱就執行 <code>apply</code>。</li>
-<li><strong>開啟真實差異。</strong> 本輪已有有效候選方案並獲准下載後，當輪操作者在 VS Code Explorer 對起點保留的行為指示檔案選 <strong>Select for Compare</strong>，再對本輪候選檔案選 <strong>Compare with Selected</strong>。指示檢視者逐項說明變更對應哪項有效分析發現／追蹤記錄；只讀取差異，不覆寫基準或自行接受全部變更。</li>
-<li><strong>重測並作決定。</strong> 只有候選方案、部署與實際版本均通過檢核，才接續 Step 11。紀錄者將相同六題一次的結果填入 <a href="../act-3/#comparison-record">Act 3 比較紀錄</a>，全組提出發布或保留理由，再交由獲授權者決定是否切換。沒有有效候選方案時就記錄阻礙，不製作假差異畫面或分數。</li>
-</ol>
-<details class="warning">
-<summary>本組已放行、且沒有在途工作時：Step 10，提交一次 Optimizer</summary>
-<h3 id="課程前讓-optimizer-提出候選">課程前：讓 Agent Optimizer 提出候選方案<a class="headerlink" href="#課程前讓-optimizer-提出候選" title="Permanent link">¶</a></h3>
-<h4 id="step-10提交-instructions-實驗">Step 10．提交行為指示實驗<a class="headerlink" href="#step-10提交-instructions-實驗" title="Permanent link">¶</a></h4>
-<p>從 Act 3 的有效比較選定起點。<strong>以下只示範以 v1 為起點的命令，僅於本組明確核准後執行，不表示 v1 必然最好。</strong> 其他起點請使用講師核對後的命令，不套用被隔離的 v2：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/10-optimize.sh<span class="w"> </span>submit<span class="w"> </span>--from-label<span class="w"> </span>v1<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>Agent Optimizer 會提出三種行為指示候選方案，以練習題試跑，使用同一份 Rubric Evaluator 評分表評分。腳本會記住工作，後續可以查看：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/10-optimize.sh<span class="w"> </span>status<span class="w"> </span>--from-label<span class="w"> </span>v1<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>需要持續等待時：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/10-optimize.sh<span class="w"> </span>status<span class="w"> </span>--watch<span class="w"> </span>--from-label<span class="w"> </span>v1<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>工作在 Foundry 執行，關閉終端機不會取消工作。已有 operation ID 或狀態不明時只查狀態，不再次 <code>submit</code>；被取消的工作也不自行重送。可在本組 <strong>contoso-travel → Optimize</strong> 核對。</p>
-<p>本場使用目前已適配的 Agent Optimizer 介面：<code>gpt-5</code> 產生行為指示候選方案，<code>gpt-5-mini</code> 評分；不是原版舊介面使用的 <code>eval.yaml</code>。Client 工具已安裝不等於此流程已通過線上驗證。</p>
-<h4 id="驗證候選方案已備妥">驗證候選方案已備妥<a class="headerlink" href="#驗證候選方案已備妥" title="Permanent link">¶</a></h4>
-<ul>
-<li>核對工作是否完成、起始標籤是否正確。</li>
-<li>比較每個候選方案與基準版本的練習題分數。</li>
-<li>查看 Token 用量、時間與各面向，不只看最佳候選方案的星號。</li>
-<li>明確區分「已提交」「已完成」「已建立版本」與「已上線」。</li>
-</ul>
-<details class="tip">
-<summary>詢問 Copilot：先解讀練習題結果</summary>
-<div class="highlight"><pre><span></span><code>以下是 bash infra/10-optimize.sh status 的輸出：[貼上去識別化內容]。
-請將候選方案與基準版本比較，說明練習題分數、Token 用量與時間。
-哪些提升可能只是雜訊？哪些還需要 Testing 才能驗證？
-不要替我下載、部署或切換使用中版本。
-</code></pre></div>
-</details>
-</details>
-<h3 id="課程中人工審查候選">課程中：人工審查候選<a class="headerlink" href="#課程中人工審查候選" title="Permanent link">¶</a></h3>
-<h4 id="不直接採用deploy-best-candidate">不直接採用「Deploy best candidate」<a class="headerlink" href="#不直接採用deploy-best-candidate" title="Permanent link">¶</a></h4>
-<p>Foundry 的星號與建議來自練習題分數。原指南刻意不直接使用 <strong>Deploy best candidate</strong>，也不在 <code>apply</code> 後直接執行一般的 <code>azd deploy</code>：</p>
-<ol>
-<li>練習題提升還沒有經 Testing 驗證。</li>
-<li>候選方案應先成為可評分的新版本，不應直接改變操作網站。</li>
-<li>原專案的每個版本使用自己的設定；一般 <code>azd deploy</code> 可能仍指向基準版本，並重建不需要的操作網站。</li>
-</ol>
-<p>我們仍然透過腳本呼叫 <code>optimize apply</code> 下載檔案，但以受控的發布腳本建立版本。</p>
-<h4 id="下載並比對-instructions">下載並比對行為指示<a class="headerlink" href="#下載並比對-instructions" title="Permanent link">¶</a></h4>
-<details class="info">
-<summary>本輪已有有效候選方案、且核准下載時：選取候選方案</summary>
-<p>延續已核准的 v1 起點示範。當輪操作者從本輪有效工作選取經核准的候選方案 ID；不使用取消或其他組工作的 ID：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>-p<span class="w"> </span><span class="s2">"輸入本輪核准的 candidate ID："</span><span class="w"> </span>CANDIDATE_ID
-bash<span class="w"> </span>infra/10-optimize.sh<span class="w"> </span>apply<span class="w"> </span>--from-label<span class="w"> </span>v1<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--candidate<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">CANDIDATE_ID</span><span class="p">:?尚未選定有效候選</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-</details>
-<p>並排閱讀：</p>
-<ul>
-<li><code>src/agent/.agent_configs/&lt;candidate-id&gt;/instructions.md</code></li>
-<li><code>src/agent/.agent_configs/baseline/instructions.md</code></li>
-</ul>
-<p>上面的 <code>baseline</code> 路徑對應本頁的 v1 起點示範。若核准的起點不同，改與該實際版本保留的行為指示比較，不一律拿原始 v1 當基準。<code>apply</code> 下載候選方案供審查，不代表部署或上線；模型與工具必須維持起點設定。</p>
-<p>逐項確認：</p>
-<ul>
-<li>改變了哪些行為？是否仍符合 Caldova 的差旅政策？</li>
-<li>回應了哪一項 Insights 分析發現？</li>
-<li>是否要求 Agent 根據工具回傳結果說明限制，而不是捏造完成？</li>
-<li>是否有直接複製練習題的答案，造成只會背題的風險？</li>
-</ul>
-<details class="note">
-<summary>原版審查畫面參考，不是本輪候選差異</summary>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/reference-candidate-review.png" data-title="原版 Copilot 候選審查面板裁切，提醒確認政策工具回傳決策與規則識別碼，並在推薦前檢查政策" data-desc-position="bottom"><img alt="原版 Copilot 候選審查面板裁切，提醒確認政策工具回傳決策與規則識別碼，並在推薦前檢查政策" decoding="async" height="200" loading="lazy" src="../assets/images/reference-candidate-review.png" width="720"></a></p>
-<p>來源：Microsoft 原始投影片第 42 頁，裁切保留候選審查重點，採 CC BY-SA 4.0。圖中的分析發現與追蹤記錄數來自原版示範，不是本組結果。本輪差異畫面必須來自實際核准的起點與候選檔案，不能由這張圖推定已完成 <code>apply</code> 或部署。<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/delivery-resources/slides/Slide42.png">原始來源</a>。</p>
-</details>
-<details class="tip">
-<summary>詢問 Copilot：解釋變更，不代替核准</summary>
-<div class="highlight"><pre><span></span><code>請比較候選方案與基準版本的 instructions.md。
-每項變更對應 .azure/&lt;env&gt;/insights/findings.json 的哪些發現？
-哪些問題仍未解決？有沒有直接複製練習題目或改變政策要求？
-請附上證據，未經我核准不要修改檔案或部署。
-</code></pre></div>
-</details>
-<h3 id="step-11建立-v3再做-testing">Step 11．建立 v3，再做 Testing<a class="headerlink" href="#step-11建立-v3再做-testing" title="Permanent link">¶</a></h3>
-<details class="warning">
-<summary>已核准候選與部署時：建立 v3，再做相同課堂評估</summary>
-<p>候選方案經審查與授權後，建立有標籤的版本：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/11-promote.sh<span class="w"> </span>deploy<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--candidate<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">CANDIDATE_ID</span><span class="p">:?請先選定並審查有效候選</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>run<span class="w"> </span>--label<span class="w"> </span>v3<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-bash<span class="w"> </span>infra/07-score.sh<span class="w"> </span>compare<span class="w"> </span>--cohort<span class="w"> </span>classroom<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>這次只改行為指示，模型應與起點一致。保留原本上線的版本，再核對 v3 回應的實際版本；若缺少執行階段權限或綁定不符，停止並由講師處理，不能僅憑標籤或成功退出就計入比較。</p>
-</details>
-<div class="admonition note">
-<p class="admonition-title">Promoted 不等於已上線</p>
-<p>Foundry 的 Agent Optimizer 工作可能顯示 <code>Promoted: v&lt;N&gt;</code>，表示候選方案已建立為版本。是否提供預設流量，仍由端點的使用中版本決定。</p>
-</div>
-<h2 id="evidence">預期畫面與證據<a class="headerlink" href="#evidence" title="Permanent link">¶</a></h2>
-<h3 id="用同一個高度計做決定">用同一個高度計做決定<a class="headerlink" href="#用同一個高度計做決定" title="Permanent link">¶</a></h3>
-<p>比較 v3 與自己的起始版本：</p>
-<ol>
-<li>Testing 的品質提升是否維持，而不只是練習題更好？</li>
-<li>政策相關面向是否仍然正確？</li>
-<li>最弱面向、延遲與 Token 用量的代價是什麼？</li>
-<li>證據是否足以發布，或應維持原狀？</li>
-</ol>
-<p>交接紀錄至少包括候選方案 ID、起點／新版本、行為指示雜湊、練習題與 Testing 的來源、部署及重測狀態。用 <a href="../act-3/#comparison-record">Act 3 的同一份比較紀錄</a>說明取捨，不把候選排序當成發布核准。</p>
-<details class="note">
-<summary>情境插畫：比較證據後，由人決定</summary>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/travel-workshop-03-human-release-decision.png" data-title="情境插畫：比較證據後，由人決定是否發布" data-desc-position="bottom"><img alt="情境插畫：比較證據後，由人決定是否發布" class="narrative-illustration" decoding="async" height="941" loading="lazy" src="../assets/images/travel-workshop-03-human-release-decision.png" width="1672"></a></p>
-<p>插畫不是本次分數或發布紀錄；是否上線以本組有效證據與核准為準。</p>
-</details>
-<details class="warning">
-<summary>需授權／可能計費 · 選做：確認 Testing 後才切換使用中版本</summary>
-<p>切換會影響端點的預設流量；後續模型呼叫可能計費，不是每位學員的必做動作。若 v3 符合需求，<strong>經授權後</strong>才上線：</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>infra/11-promote.sh<span class="w"> </span>go-live<span class="w"> </span>--label<span class="w"> </span>v3<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--environment<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-<p>在操作網站開啟新對話，核對目前使用中版本。若 Testing 沒有維持改善，保留原版本；這表示驗證機制有發揮作用。</p>
-</details>
-<details class="tip">
-<summary>詢問 Copilot：應該讓 v3 上線嗎？</summary>
-<div class="highlight"><pre><span></span><code>請比較 Agent Optimizer 的練習題結果與這份 compare 的 Testing 結果：
-[貼上去識別化內容]。
-v3 相對自己的起始版本改善了什麼？政策與最弱面向有維持嗎？
-請列出支持發布與維持原狀的證據，不要替我執行 go-live。
-</code></pre></div>
-</details>
-<p>v3-router、工具修正與學生模型訓練是<a href="../reference/resources-and-license/#original-extensions">原版的後續延伸</a>，不是本場可自行加跑的步驟。若懷疑問題在工具或資料，記錄證據交給講師，不同時改多項設定來追求分數。</p>
+<p>讓 <strong>Agent Optimizer</strong> 提出 Agent 行為指示（instructions）的調整，用練習題（practice）挑選候選方案（candidate），再用相同 Testing 題組重新驗證。自動化不應跳過人工審查，也不應讓未驗證的版本意外上線。這一步的業務意義，是讓改版有理由、審查有依據、決策可追溯；有效比較後保留原版，與證據不足而尚不能決策，也要分清楚。</p>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1核對本輪工作">1．核對本輪工作<a class="headerlink" href="#1核對本輪工作" title="Permanent link">¶</a></h3>
+<p>在本組 Foundry 的 <strong>contoso-travel → Optimize</strong> 或已交付的 <code>status</code> 輸出中，證據檢視者核對起始標籤／實際版本、工作 ID、12 道練習題、評分表與完成狀態。取消、失敗或狀態不明就記錄並停止，不因看到候選方案名稱就執行 <code>apply</code>。</p>
+<h3 id="2開啟真實差異">2．開啟真實差異<a class="headerlink" href="#2開啟真實差異" title="Permanent link">¶</a></h3>
+<p>本輪已有有效候選方案並獲准下載後，當輪操作者在 VS Code Explorer 對起點保留的行為指示檔案選 <strong>Select for Compare</strong>，再對本輪候選檔案選 <strong>Compare with Selected</strong>。指示檢視者逐項說明變更對應哪項有效分析發現／追蹤記錄；只讀取差異，不覆寫基準或自行接受全部變更。</p>
+<h3 id="3重測並作決定">3．重測並作決定<a class="headerlink" href="#3重測並作決定" title="Permanent link">¶</a></h3>
+<p>只有候選方案、部署與實際版本均通過檢核，才接續 Step 11。紀錄者將相同六題一次的結果整理成比較紀錄，全組提出發布或保留理由，再交由獲授權者決定是否切換。沒有有效候選方案時就記錄阻礙，不製作假差異畫面或分數。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
 <p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
@@ -838,6 +563,8 @@ v3 相對自己的起始版本改善了什麼？政策與最弱面向有維持�
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 有保留或發布的實際證據與理由；未執行的部署、選做或切換不算已完成。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 理解授權者決定是否上線，並維持題組隔離與單步實驗契約。</li>
 </ul>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p>進入：<a href="../reference/review-and-conclusion/">結論</a>。</p>
 <h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -861,13 +588,6 @@ v3 相對自己的起始版本改善了什麼？政策與最弱面向有維持�
 </tr>
 </tbody>
 </table>
-<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
-<div id="收尾帶走的不是哪個-model-勝出" class="anchor-alias"></div>
-
-<p>完成本輪紀錄：起始版本、有效候選方案、相同題組的重測結果，以及發布／保留／尚未完成的決策。尚有在途工作或阻礙時一併交接，不為收尾而重送或切換版本。</p>
-<p>這一步的業務意義，是讓改版有理由、審查有依據、決策可追溯；有效比較後保留原版，與證據不足而尚不能決策，也要分清楚。</p>
-<p><strong>下一步：<a href="../reference/review-and-conclusion/">回顧與結論</a>。</strong> 在結論集中回顧四幕方法、三位角色的需求，並完成兩分鐘摘要。</p>
-<p><em>來源：<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/instructions/README.md#act-4-make-it-scale">原指南 Act 4</a>。錯誤處理見<a href="../reference/troubleshooting/">疑難排解</a>。</em></p>
 
 
 
@@ -903,7 +623,7 @@ v3 相對自己的起始版本改善了什麼？政策與最弱面向有維持�
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

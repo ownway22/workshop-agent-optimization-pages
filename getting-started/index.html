@@ -13,7 +13,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../reference/concepts/">
+        <link rel="next" href="../act-1/">
       
       
         
@@ -330,10 +330,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#學員閱讀方式" class="md-nav__link">
+  <a href="#環境說明" class="md-nav__link">
     <span class="md-ellipsis">
       
-        學員閱讀方式
+        環境說明
       
     </span>
   </a>
@@ -341,54 +341,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#本場使用的環境" class="md-nav__link">
+  <a href="#checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        本場使用的環境
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#進場檢核" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        進場檢核
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#readiness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        課堂操作放行
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cohorts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        題量與公平比較
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#分工交接與安全" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        分工、交接與安全
+        Checklist
       
     </span>
   </a>
@@ -399,7 +355,7 @@
   <a href="#schedule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        兩小時建議節奏
+        準備開始
       
     </span>
   </a>
@@ -421,33 +377,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -574,61 +503,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -659,178 +534,24 @@
 
 
 <h1 id="課前準備">準備<a class="headerlink" href="#課前準備" title="Permanent link">¶</a></h1>
+<h2 id="環境說明">環境說明<a class="headerlink" href="#環境說明" title="Permanent link">¶</a></h2>
 <p>本場接續 Factory。<strong>沿用同一台 Ubuntu VM 與學員帳號，但使用第二場專用的 VS Code 啟動環境、工作目錄與本組 Foundry 專案。</strong> 不需要重新 Fork、建立 Codespaces 或重建上一場環境。</p>
-<h2 id="學員閱讀方式">學員閱讀方式<a class="headerlink" href="#學員閱讀方式" title="Permanent link">¶</a></h2>
-<p>自己的筆電瀏覽器用來閱讀教材及進入遠端桌面；Ubuntu 桌面內的瀏覽器用來開啟本組 Travel 操作網站與 Microsoft Foundry。教材與操作網站的正式連結均由講師交付，不從本機預覽的連接埠推測活動入口。</p>
-<p>頁內目錄整合於左側導覽，窄視窗請開啟頁首選單。閱讀教材不需要安裝 MkDocs 或啟動網站服務。</p>
-<h2 id="本場使用的環境">本場使用的環境<a class="headerlink" href="#本場使用的環境" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>本場安排</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>沿用</td>
-<td>上一場的 VM、遠端桌面入口、學員 Entra 帳號與分組。</td>
-</tr>
-<tr>
-<td>VS Code</td>
-<td>使用講師交付的 <strong>Agent Optimization - VS Code</strong> 專用捷徑；不要從上一場的 VS Code 視窗直接執行本場命令。</td>
-</tr>
-<tr>
-<td>專案</td>
-<td>第二場獨立的工作目錄與 Python 環境，不是 Factory 的 repository 或網站目錄。</td>
-</tr>
-<tr>
-<td>雲端</td>
-<td>使用講師交付的本組 Foundry 專案、<code>contoso-travel</code> Agent、監控與 Travel 操作網站，不借用其他組的資源。</td>
-</tr>
-<tr>
-<td>azd 環境</td>
-<td>使用交付的 <code>AZURE_ENV_NAME</code>；環境名稱須與本組交付單相符，不自行猜測或照抄其他組。</td>
-</tr>
-<tr>
-<td>共用操作</td>
-<td>每組一台主要操作 VM／工作副本，一次只有一位當輪操作者提交付費工作或部署。</td>
-</tr>
-<tr>
-<td>課堂範圍</td>
-<td>Act 1 的基準由講師課前準備；現場主線是 Act 2–4。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="本場模型不照搬原版部署清單">本場模型，不照搬原版部署清單<a class="headerlink" href="#本場模型不照搬原版部署清單" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>模型部署（deployment）</th>
-<th>本場用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>gpt-5</code></td>
-<td>v1／v3、Insights 分析與 Agent Optimizer 推理。</td>
-</tr>
-<tr>
-<td><code>gpt-5-mini</code></td>
-<td>評分表產生、評分與 Agent Optimizer 評估。</td>
-</tr>
-<tr>
-<td><code>gpt-5-mini-byok</code></td>
-<td>本組 VS Code Chat 與輔助工作，不與評分部署混用。</td>
-</tr>
-<tr>
-<td><code>model-router</code></td>
-<td>v2；Balanced routing 僅允許 GPT-5、GPT-5-mini、GPT-5-nano。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>本場不執行模型微調（fine-tuning）或 Quality Router，也不建立原版的 GPT-5.4 系列或 <code>insights-judge</code> 別名。</strong> 原版延伸路線只作<a href="../reference/resources-and-license/#original-extensions">參考閱讀</a>。</p>
-<p>容量由講師管理。Azure <code>capacity</code> 是模型／SKU 對應的原始單位，不能一律當成「千 tokens／分鐘」，也不要自行調額、改模型或更換區域。</p>
-<h2 id="進場檢核">進場檢核<a class="headerlink" href="#進場檢核" title="Permanent link">¶</a></h2>
-<ol>
-<li>進入原本被指派的 Ubuntu 遠端桌面，開啟第二場專用 VS Code 捷徑與 Terminal。</li>
-<li>確認講師交付的本組專案、Travel 操作網站、主要操作 VM 與 azd 環境。</li>
-<li>由本人依講師放行完成本場登入與 BYOK 檢核。在 <strong>Chat: Manage Language Models</strong> 使用交付的 Azure 模型端點與 <code>gpt-5-mini-byok</code>，不填 Foundry 專案端點；key 只透過 SecretStorage 輸入，不貼入 Chat、Terminal 或教材。不複製上一場或教師的登入快取、keys 或整個 <code>.azure/</code>。</li>
-<li>
-<p>在第二場專案根目錄確認環境名稱。這個檢查只讀取已交付的非秘密變數，<strong>不代表雲端已就緒</strong>：</p>
+<p><br></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/workshop-env-architecture.png" data-title="Workshop 環境架構示意：學員筆電連接 Microsoft Foundry，操作員透過 Azure 遠端桌面的 VS Code 與 GitHub Copilot 操作 Foundry" data-desc-position="bottom"><img alt="Workshop 環境架構示意：學員筆電連接 Microsoft Foundry，操作員透過 Azure 遠端桌面的 VS Code 與 GitHub Copilot 操作 Foundry" class="workshop-architecture" decoding="async" height="941" loading="lazy" src="../assets/images/workshop-env-architecture.png" width="1672"></a></p>
+<p><br></p>
+<p><span id="readiness"></span></p>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 進入原本被指派的 Ubuntu 遠端桌面，開啟第二場專用 VS Code 捷徑與 Terminal。</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 在第二場專案根目錄確認環境名稱。這個檢查只讀取已交付的非秘密變數：</p>
 <div class="highlight"><pre><span></span><code><span class="nb">printf</span><span class="w"> </span><span class="s1">'組別：%s\n環境：%s\n'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">WORKSHOP_GROUP_ID</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div>
-<p>組別與環境須與本組交付單相符。缺值或分組不符時停止，請講師處理，不自行設定或借用其他組環境。
-5. 確認講師已宣布本組哪幾項操作可執行，再進入付費工作或部署步驟。</p>
 </li>
-</ol>
-<p>核對完成後，紀錄者留下<strong>本組環境、主要 VM、當輪操作者、Travel 操作網站／Foundry 入口、使用中版本與結果來源</strong>。只存放在講師指定的受控位置，不將帳號識別資料、金鑰或完整執行追蹤記錄（trace）貼到公開教材。</p>
-<div class="admonition important">
-<p class="admonition-title">命令的執行位置與授權</p>
-<p>課堂命令只由當輪操作者，在主要 VM 的第二場專用 Terminal、專案根目錄執行；該目錄可看到 <code>infra/</code>、<code>src/</code>、<code>data/</code> 與 <code>azure.yaml</code>。不是自己的筆電 Terminal，也不是網站的 <code>workshop-pages-mkdocs/</code> 目錄。命令明確傳入本組 <code>AZURE_ENV_NAME</code>，但環境變數存在不等於取得操作授權。</p>
-</div>
-<h2 id="readiness">課堂操作放行<a class="headerlink" href="#readiness" title="Permanent link">¶</a></h2>
-<p><strong>教材公開不代表雲端環境已就緒，也不代表取得操作授權。</strong> 本站不即時探測各組狀態；課堂以講師當日交付的版本、可操作項目與核准範圍為準。</p>
-<table>
-<thead>
-<tr>
-<th>進入操作前要確認</th>
-<th>未符合時怎麼做</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>本組來源版本、專用 Client 與本人登入已完成交付。</td>
-<td>停在環境確認，不自行重建；本機測試或其他組成功不能代替本組驗收。</td>
-</tr>
-<tr>
-<td>基準標籤、回應實際版本及證據來源一致。</td>
-<td>保留原始紀錄；版本不符或不明的結果須隔離，不列入比較。</td>
-</tr>
-<tr>
-<td>本輪 Insights 的追蹤記錄、時間範圍與費用已核准。</td>
-<td>保留失敗或缺資料狀態，不自行重送、擴大配額或以抽樣冒充完整分析。</td>
-</tr>
-<tr>
-<td>Optimizer 工作有效且已完成，候選方案有明確來源。</td>
-<td>取消、失敗或狀態不明就停止；沒有新核准，不再次提交、套用或部署。</td>
-</tr>
-<tr>
-<td>當輪操作者與工作排程已確認。</td>
-<td>不從多台 VM 重複提交；先向講師確認本組可執行範圍。</td>
-</tr>
-</tbody>
-</table>
-<p>被阻擋時，先使用講師交付的<strong>可驗證、已去識別化的本組預跑結果</strong>，註明時間、版本與來源。沒有可用的預跑結果就標記「尚未完成」，不拿其他組或原版影片的分數代替本組結果。排查方式見<a href="../reference/troubleshooting/">疑難排解</a>。</p>
-<h2 id="cohorts">題量與公平比較<a class="headerlink" href="#cohorts" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>用途</th>
-<th>題量／重複次數</th>
-<th>使用方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>課前完整探索</td>
-<td>36 題 × 3 次，共 108 個回答</td>
-<td>建立基準行為與追蹤記錄；不是全員在課堂各跑一次。</td>
-</tr>
-<tr>
-<td>課堂探索</td>
-<td>BLOCK、EVIDENCE、HERO、ACCESS 各一次</td>
-<td>依講師放行，循序操作四個代表情境；不是完整探索。</td>
-</tr>
-<tr>
-<td>完整評估 <code>full</code></td>
-<td>24 題 × 3 次，共 72 個回答／版本</td>
-<td>課前預跑，保留題集、評分表、評分模型與實際版本。</td>
-</tr>
-<tr>
-<td>課堂評估 <code>classroom</code></td>
-<td>6 題 × 1 次／版本</td>
-<td>Testing 題集各難度依順序取前兩題；使用 <code>--cohort classroom</code>，不是任取六題。</td>
-</tr>
-<tr>
-<td>Agent Optimizer 練習題（practice）</td>
-<td>12 道 Exploring 練習題、3 個候選方案</td>
-<td>不使用 Testing 題目；候選方案仍要重新做相同評估題組的評分。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>六題一次的分數不能與 24 題三次直接混比。</strong> 同一比較中的題目、重複次數、評分表版本、評分模型與實際回應版本必須一致；缺少證據或版本混用的結果不納入比較。<code>source.type: local</code> 指評分使用已擷取的回答，仍會呼叫付費評分服務，不是離線免費評分。</p>
-<h2 id="分工交接與安全">分工、交接與安全<a class="headerlink" href="#分工交接與安全" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>當輪操作者：</strong>在主要 VM 執行本輪核准命令；同組一次只有一個重工作，不重複提交。</li>
-<li><strong>證據檢視者：</strong>核對追蹤記錄、回應 ID、實際版本與來源。</li>
-<li><strong>評分／指示檢視者：</strong>審查評分表或 Agent 行為指示差異，不自行改動共用評分依據。</li>
-<li><strong>紀錄者：</strong>保存題量、工作狀態、結果路徑與決策；切換角色時一併交接。</li>
 </ul>
-<p>其他組員可在個人 VM 閱讀受控匯出的非秘密結果及準備提案。付費工作依講師排程，不在多台 VM 複製可寫狀態後並行提交；若要更換主要 VM，先停止提交並完成狀態交接，由新操作者本人登入。</p>
-<h2 id="schedule">兩小時建議節奏<a class="headerlink" href="#schedule" title="Permanent link">¶</a></h2>
+<h2 id="schedule">準備開始<a class="headerlink" href="#schedule" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -867,14 +588,16 @@
 </tr>
 </tbody>
 </table>
-<p>這是課堂安排，不是雲端完成時間承諾。工作尚未完成就註明狀態；講師有交付可驗證的本組預跑證據時才使用，沒有證據不補造結果。</p>
-<div class="admonition warning">
-<p class="admonition-title">不重建、不整組清理</p>
-<p>本場沿用上一場的共用資源群組。不要執行原版整套 setup／teardown，不刪除、覆寫或調降上一場資源。權限、模型容量、環境建置與課後清理由講師或指定資源負責人處理。</p>
-</div>
-<p>完成條件是自行核對，本站不儲存進度。</p>
+<h3 id="分工交接與安全">分工、交接與安全<a class="headerlink" href="#分工交接與安全" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>當輪操作者：</strong>在主要 VM 執行本輪核准命令；同組一次只有一個重工作，不重複提交。</li>
+<li><strong>證據檢視者：</strong>核對追蹤記錄、回應 ID、實際版本與來源。</li>
+<li><strong>評分／指示檢視者：</strong>審查評分表或 Agent 行為指示差異，不自行改動共用評分依據。</li>
+<li><strong>紀錄者：</strong>保存題量、工作狀態、結果路徑與決策；切換角色時一併交接。</li>
+</ul>
+<p>其他組員可在個人 VM 閱讀受控匯出的非秘密結果及準備提案。付費工作依講師排程，不在多台 VM 複製可寫狀態後並行提交；若要更換主要 VM，先停止提交並完成狀態交接，由新操作者本人登入。</p>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
-<p><strong>下一步：<a href="../reference/concepts/">核心概念</a>。</strong> 看懂比較方法與詞彙後，再確認 Act 1 的課前基準，接著進入現場 Act 2–4。</p>
+<p>進入：<a href="../act-1/">Act 1：先讓它運作</a>。</p>
 
 
 
@@ -910,7 +633,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

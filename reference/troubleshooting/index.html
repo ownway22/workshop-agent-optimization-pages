@@ -10,10 +10,6 @@
         <link rel="canonical" href="https://ownway22.github.io/workshop-agent-optimization-pages/reference/troubleshooting/">
       
       
-        <link rel="prev" href="../review-and-conclusion/">
-      
-      
-        <link rel="next" href="../resources-and-license/">
       
       
         
@@ -295,33 +291,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../act-1/" class="md-nav__link">
         
   
@@ -437,176 +406,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="本頁目錄">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      本頁目錄
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#教材閱讀問題" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        教材閱讀問題
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lab交付或健康檢查失敗" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lab：交付或健康檢查失敗
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lab提問或-insights-有問題" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lab：提問或 Insights 有問題
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#labscorecard-與-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lab：評分表與版本
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#laboptimizer-取消逾時或候選不可用" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lab：Optimizer 取消、逾時或候選不可用
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#怎麼提供有用的錯誤回報" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        怎麼提供有用的錯誤回報？
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -697,12 +497,12 @@
 <p>跨日或時間窗不符時，由講師核對要分析的追蹤記錄、版本與容量，再決定是否重新核准。增加時間範圍不是通用修正。詳細背景可讀<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/docs/troubleshooting.md">原始疑難排解</a>，但其中舊版部署與模型設定不是本場可直接照抄的操作。</p>
 <h2 id="labscorecard-與-version">Lab：評分表與版本<a class="headerlink" href="#labscorecard-與-version" title="Permanent link">¶</a></h2>
 <h3 id="scorecard-顯示-agent-沒有-instructions">評分表顯示 Agent 沒有行為指示<a class="headerlink" href="#scorecard-顯示-agent-沒有-instructions" title="Permanent link">¶</a></h3>
-<p>若是以下已知警告，請依 <a href="../../act-3/#step-5建立-rubric-evaluator-scorecard">Act 3 的說明</a>檢查評分面向：</p>
+<p>若是以下已知警告，請依 <a href="../../act-3/#steps">Act 3 的說明</a>檢查評分面向：</p>
 <div class="highlight"><pre><span></span><code>Generated with input-quality warnings: The agent has no instructions.
 </code></pre></div>
 <p>不要為了隱藏這個警告而重建評分依據；真正的工作失敗仍要保留錯誤與排查。</p>
 <h3 id="label-還沒有建立">標籤還沒有建立<a class="headerlink" href="#label-還沒有建立" title="Permanent link">¶</a></h3>
-<p>出現 <code>has not been built yet</code> 時，先確認<a href="../concepts/#versionlabel-與-endpoint">版本標籤與建立步驟</a>。不要把 Foundry 的編號自行當成 v2 或 v3。</p>
+<p>出現 <code>has not been built yet</code> 時，先向講師確認該標籤對應的版本是否已建立。不要把 Foundry 的編號自行當成 v2 或 v3。</p>
 <h3 id="回應實際版本與-label請求版本不符">回應實際版本與標籤／請求版本不符<a class="headerlink" href="#回應實際版本與-label請求版本不符" title="Permanent link">¶</a></h3>
 <p>保存回應 ID、實際 <code>agent_reference</code> 與執行階段證據，隔離該筆結果並停止比較。請求用了 <code>--version</code> 或另外建立了對應版本的工作階段，都不能取代實際回應的驗證。</p>
 <h3 id="課堂分數無法比較">課堂分數無法比較<a class="headerlink" href="#課堂分數無法比較" title="Permanent link">¶</a></h3>
@@ -763,7 +563,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

@@ -295,33 +295,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../act-1/" class="md-nav__link">
         
   
@@ -422,32 +395,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        前置條件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        預期畫面與證據
+        步驟
       
     </span>
   </a>
@@ -563,61 +514,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -648,59 +545,19 @@
 
 
 <h1 id="act-2找出表現不佳的地方">Act 2：找出表現不佳的地方<a class="headerlink" href="#act-2找出表現不佳的地方" title="Permanent link">¶</a></h1>
-<p><strong>Understand where it struggles</strong> · 不只看一個回答，而是找出反覆出現的問題。</p>
-<p><strong>業務問題：哪些失誤會讓人重查、重做或交接不清？</strong> 就像設備維護摘要若漏掉資料依據，下一位接手者仍得重新確認。本幕不是挑一個出錯回答來批評模型，而是找出有證據、值得優先改善的問題。</p>
 <div id="這一幕的目標" class="anchor-alias"></div>
 
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>向同一個 v1 重複提出 Exploring 題目，收集執行追蹤記錄（trace），讓 <strong>Insights</strong> 歸納哪些問題經常發生。先知道問題在哪裡，才知道下一步值得改什麼。</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>本幕安排</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>現場主線</td>
-<td><strong>學員操作 · 必做</strong>：讀取 v1 追蹤記錄與 Insights 分析發現（findings），區分觀察與假設。</td>
-</tr>
-<tr>
-<td>閱讀與觀察位置</td>
-<td>教材瀏覽器與獲授權的 Microsoft Foundry；只閱讀講師交付的本次證據。</td>
-</tr>
-<tr>
-<td>原指令執行位置</td>
-<td>主要 Ubuntu VM 的第二場專用 Terminal、第二場專案根目錄，明確指定本組環境。</td>
-</tr>
-<tr>
-<td>時間</td>
-<td><strong>待講師試跑確認</strong>。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">前置條件<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<div class="admonition info">
-<p class="admonition-title">進入本幕之前</p>
-<p><a href="../act-1/">Act 1</a> 的本組基準與本人登入已交付，且講師已放行本輪操作。先核對<a href="../getting-started/#readiness">目前交付狀態</a>，不要因為教材或操作網站可開啟就提交工作。</p>
-</div>
-<p>本場課前完整探索為 36 題 × 3 次；課堂只循序操作 BLOCK、EVIDENCE、HERO、ACCESS 各一次。操作網站的四個情境不等於題集檔案的前四列，也不是完整 108 筆探索的替代品。</p>
-<p>已取得本次 Exploring 執行摘要、v1 追蹤記錄與分析發現的閱讀權限。記錄尚未送達或工作尚未完成時，先記錄狀態，不假裝已完成分析。</p>
-<div class="admonition warning">
-<p class="admonition-title">需授權／可能計費</p>
-<p>下列操作會呼叫模型或啟動分析。取得授權後，從本場專案根目錄執行。不要為了等待結果，在同一個環境重複提交多個作業。</p>
-</div>
-<h2 id="steps">操作步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="學員操作--必做">學員操作 · 必做<a class="headerlink" href="#學員操作--必做" title="Permanent link">¶</a></h3>
-<h4 id="1循序操作四個情境">1．循序操作四個情境<a class="headerlink" href="#1循序操作四個情境" title="Permanent link">¶</a></h4>
+<p>我們站上山坡了——v1 是可重複比較的起點，但一次回答不能證明穩定性，多問問題才能找出反覆出現的問題。我們將向同一個 v1 重複提出 Exploring 題目，收集執行追蹤記錄（trace），讓 <strong>Insights</strong> 歸納哪些問題經常發生。先知道問題在哪裡，才知道下一步值得改什麼。</p>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1循序操作四個情境">1．循序操作四個情境<a class="headerlink" href="#1循序操作四個情境" title="Permanent link">¶</a></h3>
 <p><strong>位置：主要 VM 內的本組 Travel 操作網站。</strong> 講師放行後，由當輪操作者依序選取 <strong>BLOCK-01、EVIDENCE-01、HERO-01、ACCESS-01</strong>，每次確認輸入與收據，再按一次 <strong>Review travel request</strong>，等結果返回後才進行下一題。選情境不等於已送出，不連續點送出。</p>
 <p>證據檢視者展開 <strong>How your request was checked</strong>，對照政策工具的參數（arguments）、回傳結果（result）與回答；紀錄者從 <strong>Service details</strong> 記下情境、UTC 時間、Response ID、延遲、輸入／輸出 Token 用量與本組來源。畫面的 <strong>Active version</strong> 是路由資訊，<strong>不能單獨證明回應實際執行版本</strong>；仍需保留原始回應與執行階段紀錄核對。</p>
 <p>如果出現錯誤、重複請求或版本不符，停在該題記錄，不以成功的另一題代替。</p>
-<h4 id="2在-foundry-找到同一次執行">2．在 Foundry 找到同一次執行<a class="headerlink" href="#2在-foundry-找到同一次執行" title="Permanent link">¶</a></h4>
+<h3 id="2在-foundry-找到同一次執行">2．在 Foundry 找到同一次執行<a class="headerlink" href="#2在-foundry-找到同一次執行" title="Permanent link">¶</a></h3>
 <p><strong>位置：本組 Microsoft Foundry → Agents → contoso-travel → Traces。</strong> 證據檢視者用操作時間、Response ID／追蹤資訊與實際版本找到 HERO 的同一次執行，展開工具呼叫與回傳。不要只選第一筆或只篩選名字相同的 Agent。</p>
 <p>紀錄者留下追蹤記錄識別資訊及一項可追溯的觀察，例如「預訂工具拒絕，但回答聲稱完成」。追蹤記錄尚未送達時先等候並核對範圍，不為了產生畫面再送一次付費請求。</p>
-<h4 id="3從單筆證據整理反覆問題">3．從單筆證據整理反覆問題<a class="headerlink" href="#3從單筆證據整理反覆問題" title="Permanent link">¶</a></h4>
+<h3 id="3從單筆證據整理反覆問題">3．從單筆證據整理反覆問題<a class="headerlink" href="#3從單筆證據整理反覆問題" title="Permanent link">¶</a></h3>
 <p><strong>位置：本組 Agent 的 Insights 或講師交付的分析發現。</strong> 對照每項發現的時間、版本及涵蓋的追蹤記錄；將一項發現分類為行為指示、工具／資料或證據不足，說明理由。單筆追蹤記錄只能支持該次觀察，是否反覆發生要看批次證據。</p>
 <p>若本組尚未有有效 Insights，就記下目前阻礙與可用的追蹤記錄，不把原版示範發現當成本組發現。下一個區塊說明課前完整資料；新增分析仍須符合 Step 4 的放行條件。</p>
 <details class="info">
@@ -710,6 +567,44 @@
 <p>課前完整預跑為 <strong>36 道 Exploring 題目，每題 3 次，共 108 個回答</strong>。每次使用新的對話，並保留回應的實際 Agent 版本與來源。這項工作不由全體學員各跑一次。</p>
 <p>重複提問的目的，是分辨偶然與規律。一次沒出錯不代表穩定，一次出錯也不代表所有情境都不好。</p>
 <p>付費工作依講師排程，探索先採循序執行。不要自行提高並行數或縮小已約定的題集，再把不同方式的延遲當成公平比較。</p>
+<h3 id="cohorts">題量與公平比較<a class="headerlink" href="#cohorts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>題量／重複次數</th>
+<th>使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>課前完整探索</td>
+<td>36 題 × 3 次，共 108 個回答</td>
+<td>建立基準行為與追蹤記錄；不是全員在課堂各跑一次。</td>
+</tr>
+<tr>
+<td>課堂探索</td>
+<td>BLOCK、EVIDENCE、HERO、ACCESS 各一次</td>
+<td>依講師放行，循序操作四個代表情境；不是完整探索。</td>
+</tr>
+<tr>
+<td>完整評估 <code>full</code></td>
+<td>24 題 × 3 次，共 72 個回答／版本</td>
+<td>課前預跑，保留題集、評分表、評分模型與實際版本。</td>
+</tr>
+<tr>
+<td>課堂評估 <code>classroom</code></td>
+<td>6 題 × 1 次／版本</td>
+<td>Testing 題集各難度依順序取前兩題；使用 <code>--cohort classroom</code>，不是任取六題。</td>
+</tr>
+<tr>
+<td>Agent Optimizer 練習題（practice）</td>
+<td>12 道 Exploring 練習題、3 個候選方案</td>
+<td>不使用 Testing 題目；候選方案仍要重新做相同評估題組的評分。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>六題一次的分數不能與 24 題三次直接混比。</strong> 同一比較中的題目、重複次數、評分表版本、評分模型與實際回應版本必須一致；缺少證據或版本混用的結果不納入比較。<code>source.type: local</code> 指評分使用已擷取的回答，仍會呼叫付費評分服務，不是離線免費評分。</p>
 <h4 id="驗證-step-3-的產出">驗證 Step 3 的產出<a class="headerlink" href="#驗證-step-3-的產出" title="Permanent link">¶</a></h4>
 <ul>
 <li>檢查 script 的簡單／中等／困難摘要與失敗項目。</li>
@@ -751,9 +646,8 @@
 <li>回到 Insights，對照相同問題涵蓋多少筆追蹤記錄。</li>
 <li>將發現分成兩類：<strong>行為指示的問題</strong>與<strong>工具／資料的問題</strong>。需要更多證據時，保留不確定性。</li>
 </ol>
-<h2 id="evidence">預期畫面與證據<a class="headerlink" href="#evidence" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/reference-traces.png" data-title="原版 Foundry Traces 畫面裁切，顯示 Agent 分頁、版本與時間範圍篩選，以及追蹤記錄的耗時與 Token 用量欄位" data-desc-position="bottom"><img alt="原版 Foundry Traces 畫面裁切，顯示 Agent 分頁、版本與時間範圍篩選，以及追蹤記錄的耗時與 Token 用量欄位" decoding="async" height="945" loading="lazy" src="../assets/images/reference-traces.png" width="1550"></a></p>
-<p><em>來源：Microsoft 原始投影片第 18 頁，裁切保留 Traces 介面，採 CC BY-SA 4.0。圖中的專案、日期、數字與狀態屬原版示範，僅供辨識位置，不是本組成果。<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/delivery-resources/slides/Slide18.png">原始來源</a>。</em></p>
+<p><em>圖片 1：透過 Traces 畫面掌握 Travel agent 在正式環境的表現和穩定度</em></p>
 <p>應能將同一個 v1 的實際回應、Exploring 摘要與 Insights 分析發現對起來。課前 108 個回答、課堂四個情境、部分失敗與尚未完成的工作要分開記錄；不能混用其他組或其他版本來補足數字。</p>
 <h3 id="hero-evidence-chain">HERO 帶讀：行程寫出來，下一個人就能接手嗎？<a class="headerlink" href="#hero-evidence-chain" title="Permanent link">¶</a></h3>
 <p>旅客想要的是能繼續處理的合規行程，而不只是一段完整文字。請直接使用本輪有效的 HERO 回應；若未取得，就使用有來源的本組預跑紀錄，沒有證據時不補造台詞或結果。</p>
@@ -829,19 +723,6 @@
 </tbody>
 </table>
 <p>對照半導體場景，這張表幫助團隊討論「下一筆改善時間該花在哪裡」。本場只練習判讀及核准範圍內的單一步驟，不把設備維護類比變成實際製程或設備變更。</p>
-<details class="note">
-<summary>情境插畫：核對證據，不是操作截圖</summary>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/travel-workshop-01-evidence-verification.png" data-title="情境插畫：核對旅行資訊、收據與工具證據" data-desc-position="bottom"><img alt="情境插畫：核對旅行資訊、收據與工具證據" class="narrative-illustration" decoding="async" height="941" loading="lazy" src="../assets/images/travel-workshop-01-evidence-verification.png" width="1672"></a></p>
-<p>插畫不代表本次執行；判斷仍以本組實際工具回傳結果與追蹤記錄為準。</p>
-</details>
-<details class="tip">
-<summary>選做：詢問 Copilot，整理 Insights 發現</summary>
-<div class="highlight"><pre><span></span><code>請閱讀 .azure/&lt;env&gt;/insights/findings.json。
-依涵蓋的追蹤記錄數量排序，每項用一句話解釋。
-哪些像行為指示的問題，哪些需要檢查工具或資料？
-請把可驗證的發現與假設分開，不要直接修改程式碼或雲端設定。
-</code></pre></div>
-</details>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
 <p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
@@ -915,7 +796,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

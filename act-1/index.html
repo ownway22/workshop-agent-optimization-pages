@@ -10,7 +10,7 @@
         <link rel="canonical" href="https://ownway22.github.io/workshop-agent-optimization-pages/act-1/">
       
       
-        <link rel="prev" href="../reference/concepts/">
+        <link rel="prev" href="../getting-started/">
       
       
         <link rel="next" href="../act-2/">
@@ -292,33 +292,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/concepts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    核心概念
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -395,32 +368,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        前置條件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        預期畫面與證據
+        步驟
       
     </span>
   </a>
@@ -439,10 +390,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -450,10 +401,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        疑難排解
       
     </span>
   </a>
@@ -563,61 +514,7 @@
   <span class="md-ellipsis">
     
   
-    回顧與結論
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    疑難排解
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/resources-and-license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    資源與授權
+    結論
   
 
     
@@ -648,74 +545,18 @@
 
 
 <h1 id="act-1先讓它運作">Act 1：先讓它運作<a class="headerlink" href="#act-1先讓它運作" title="Permanent link">¶</a></h1>
-<p><strong>Make it work</strong> · 課前由講師準備基準，課堂確認本組使用的是哪個 v1。</p>
-<p><strong>業務問題：這個助理先能幫使用者完成哪件有用的事？</strong> 在設備維護資訊助理的對照情境中，能整理資訊只是起點，團隊還要知道資料從哪裡來、哪部分尚未確認。本幕先確認可核對的基準，不重新部署，也不把服務待命當成工作已完成。</p>
 <div id="這一幕的目標" class="anchor-alias"></div>
 
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>確認講師已交付的 Contoso Travel Hosted Agent、Travel 操作網站與 v1 基準版本（baseline）的證據。本場 v1 使用 <code>gpt-5</code>；學員不重建環境。這一步回答「起點是什麼」，還沒有回答「每次都能不能做好」。</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>本幕安排</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>現場主線</td>
-<td><strong>學員操作 · 必做</strong>：核對 v1 的健康檢查與四個情境的證據。</td>
-</tr>
-<tr>
-<td>閱讀與觀察位置</td>
-<td>自己筆電的教材瀏覽器；依講師交付開啟 Travel 操作網站與 Microsoft Foundry。</td>
-</tr>
-<tr>
-<td>原指令執行位置</td>
-<td>沿用 Ubuntu VM，但使用第二場專用 VS Code／Terminal、第二場專案根目錄與本組環境。</td>
-</tr>
-<tr>
-<td>時間</td>
-<td><strong>待講師試跑確認</strong>。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">前置條件<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<ul>
-<li>已完成<a href="../getting-started/">準備</a>與<a href="../reference/concepts/">核心概念</a>，確認角色、Travel 環境與可操作範圍。</li>
-<li>講師已提供 v1 環境或本次實際執行的去識別化證據；未交付時先停止，不自行建立共用環境。</li>
-<li>若要親自提問或重現指令，已取得必要權限與費用授權。</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">需授權／可能計費</p>
-<p>講師交付前不提交模型請求，也不重建環境。先確認<a href="../getting-started/#readiness">目前交付狀態</a>；基礎資源檢查通過，不等於本組登入、實際版本綁定與完整課程都已驗證。</p>
-</div>
-<h2 id="steps">操作步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="學員操作--必做">學員操作 · 必做<a class="headerlink" href="#學員操作--必做" title="Permanent link">¶</a></h3>
-<ol>
-<li><strong>找到本組操作網站。</strong> 在 Ubuntu 桌面內的瀏覽器開啟講師交付的 Travel 網址，由本人完成登入；不是教材網站，也不是上一場 Factory 操作介面。401／403 或網址不符時停下來請講師處理。</li>
-<li><strong>對照基準紀錄。</strong> 證據檢視者核對網站右上角的 Agent、模型、設定與交付的 v1 實際版本。畫面的 <code>Ready</code> 只表示表單待命；版本或模型不符時，不提交請求來「試看看」。</li>
-<li><strong>辨識下一幕要用的區域。</strong> 找到四個情境按鈕、輸入區與 <strong>Review travel request</strong>；本幕先閱讀基準證據，不按送出。紀錄者留下本組環境、v1 標籤／實際版本、模型與檢查時間，再交接給 Act 2 操作者。</li>
-</ol>
-<details class="info">
-<summary>講師課前準備：交付本組基準，不由學員重建</summary>
-<h3 id="課程前建立-v1">課程前：建立 v1<a class="headerlink" href="#課程前建立-v1" title="Permanent link">¶</a></h3>
-<h4 id="step-1建置所有內容">Step 1．建置所有內容<a class="headerlink" href="#step-1建置所有內容" title="Permanent link">¶</a></h4>
-<p>本場使用主辦方受控部署入口，在既有資源群組中新增第二場的專案與服務，不執行原版整套 setup。講師須交付本組環境名稱、操作網站、核准來源版本與可操作項目；保留第一場服務。</p>
-<h4 id="step-2確認所有項目運作正常">Step 2．確認所有項目運作正常<a class="headerlink" href="#step-2確認所有項目運作正常" title="Permanent link">¶</a></h4>
-<p>講師分別確認：來源發行、Client 與本人登入、本組資源綁定、實際執行版本、四個情境的執行追蹤記錄（trace），以及後續評估可用性。只完成其中一項不能宣告全部就緒。</p>
-<p>交付的非秘密紀錄至少包括 v1 標籤對應的實際版本、<code>gpt-5</code> 模型、設定／Agent 行為指示雜湊、檢查時間與結果來源。完整教師部署目錄與登入快取不散發給學員。</p>
-<details class="tip">
-<summary>詢問 Copilot：解讀健康檢查</summary>
-<div class="highlight"><pre><span></span><code>以下是講師交付的本組基準與檢查紀錄：[貼上已去除敏感資訊的內容]。
-請說明哪些檢查已通過、v1 對應哪個實際版本，以及進入 Act 2 前還缺少什麼。
-不要替我變更雲端資源或權限。
-</code></pre></div>
-</details>
-</details>
-<h2 id="evidence">預期畫面與證據<a class="headerlink" href="#evidence" title="Permanent link">¶</a></h2>
+<p>我們正在 hill climbing 的起點位置，這一步的意義是先說清楚助理能幫什麼、哪部分仍需人接手，讓後續比較有共同起點。確認講師已交付的 Travel Agent、Travel 操作網站與 v1 基準版本（baseline）的證據。本場 v1 使用 <code>gpt-5</code>；學員不重建環境。這一步回答「起點是什麼」，還沒有回答「每次都能不能做好」。</p>
+<p><br></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/Slide44.png" data-title="Slide44" data-desc-position="bottom"><img alt="Slide44" class="Slide44" fetchpriority="high" height="1100" loading="eager" src="../assets/images/Slide44.png" width="2200"></a></p>
+<p><br></p>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1找到本組操作網站">1．找到本組操作網站<a class="headerlink" href="#1找到本組操作網站" title="Permanent link">¶</a></h3>
+<p>在 Ubuntu 桌面內的瀏覽器開啟講師交付的 Travel 網址，由本人完成登入；不是教材網站，也不是上一場 Factory 操作介面。401／403 或網址不符時停下來請講師處理。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/reference-portal.png" data-title="原版 Travel 操作網站介面：左側選擇情境與送出請求，右側顯示推薦、政策與結果，右上角為執行階段資訊" data-desc-position="bottom"><img alt="原版 Travel 操作網站介面：左側選擇情境與送出請求，右側顯示推薦、政策與結果，右上角為執行階段資訊" decoding="async" height="1080" loading="lazy" src="../assets/images/reference-portal.png" width="1920"></a></p>
-<p><em>介面定位參考，來源：Microsoft 原始投影片第 16 頁，原圖未改寫，採 CC BY-SA 4.0。圖中的 <code>gpt-5.4</code>、版本與收據是原版示範，不是本場設定或成果；本場使用 <code>gpt-5</code>，實際入口與版本以本組交付為準。<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/delivery-resources/slides/Slide16.png">原始來源</a>。</em></p>
+<p><em>圖片1：差旅規範與建議</em></p>
 <table>
 <thead>
 <tr>
@@ -742,9 +583,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="課程中觀察四個旅遊情境">課程中：觀察四個旅遊情境<a class="headerlink" href="#課程中觀察四個旅遊情境" title="Permanent link">¶</a></h3>
-<p>開啟講師交付的本組 Travel 操作網站，先閱讀四個情境與基準紀錄。現場重播會產生模型費用，統一在 <a href="../act-2/">Act 2</a> 由當輪操作者依放行範圍進行。</p>
-<p><strong>先看決策橫幅與工具證據，再讀 Agent 的文字。</strong> 決策橫幅根據工具回傳結果（tool result）判定，可能與語氣樂觀的回答不一致。</p>
+<h3 id="2對照基準紀錄">2．對照基準紀錄<a class="headerlink" href="#2對照基準紀錄" title="Permanent link">¶</a></h3>
+<p>證據檢視者核對網站右上角的 Agent、模型、設定與交付的 v1 實際版本。畫面的 <code>Ready</code> 只表示表單待命；版本或模型不符時，不提交請求來「試看看」。</p>
+<h3 id="3辨識下一幕要用的區域">3．辨識下一幕要用的區域<a class="headerlink" href="#3辨識下一幕要用的區域" title="Permanent link">¶</a></h3>
+<p>找到四個情境按鈕、輸入區與 <strong>Review travel request</strong>；本幕先閱讀基準證據，不按送出。紀錄者留下本組環境、v1 標籤／實際版本、模型與檢查時間，再交接給 Act 2 操作者。<strong>先看決策橫幅與工具證據，再讀 Agent 的文字。</strong> 決策橫幅根據工具回傳結果（tool result）判定，可能與語氣樂觀的回答不一致。</p>
 <table>
 <thead>
 <tr>
@@ -776,25 +618,7 @@
 </tr>
 </tbody>
 </table>
-<p>原指南中，HERO 可能出現「行程看起來很好，預訂卻未完成」；ACCESS 可能只完成部分需求。這些是要核對的問題線索，不是每次執行必然相同的結果。</p>
-<div class="admonition note">
-<p class="admonition-title">Dry-run 不是已完成真實預訂</p>
-<p>Caldova、Contoso Travel、政策與資料皆為虛構。即使示範工具回傳成功，也不是對真實訂票、付款或公司核准的證明。</p>
-</div>
-<h3 id="記下你的觀察">記下你的觀察<a class="headerlink" href="#記下你的觀察" title="Permanent link">¶</a></h3>
-<ul>
-<li>哪個情境的決策橫幅與文字回答不一致？</li>
-<li>政策檢查發生在推薦與預訂之前，還是之後？</li>
-<li>Agent 是否把找不到的項目說成已經找到？</li>
-<li>金額、幣別與匯率是否能從工具回傳結果重新核對？</li>
-</ul>
-<details class="tip">
-<summary>選做：詢問 Copilot，解釋 HERO 的落差</summary>
-<div class="highlight"><pre><span></span><code>以下是 HERO 情境的決策橫幅、回答與可見的工具回傳結果：[貼上已去除敏感資訊的內容]。
-哪些敘述與預訂結果不一致？這透露了 v1 處理政策證明的什麼問題？
-請區分觀察到的事實與還需要更多追蹤記錄才能確認的猜測。
-</code></pre></div>
-</details>
+<p>HERO 可能出現「行程看起來很好，預訂卻未完成」；ACCESS 可能只完成部分需求。這些是要核對的問題線索，不是每次執行必然相同的結果。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
 <p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
@@ -803,6 +627,8 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已逐一核對四個情境的決策橫幅、政策與工具回傳結果，或明確記錄缺少哪些證據。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能解釋 dry-run 與真實預訂的差別；未執行的操作不記為已完成。</li>
 </ul>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p><strong>進入：<a href="../act-2/">Act 2：找出表現不佳的地方</a>。</strong></p>
 <h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -826,12 +652,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
-<h3 id="這一步在-hill-climbing-的位置">這一步在 hill climbing 的位置<a class="headerlink" href="#這一步在-hill-climbing-的位置" title="Permanent link">¶</a></h3>
-<p>我們站上山坡了：<strong>v1 是可重複比較的起點。</strong> 單次回答不能證明穩定性；下一幕要多問幾次，找出它通常在哪裡出錯。</p>
-<p>這一步的業務意義，是先說清楚助理能幫什麼、哪部分仍需人接手，讓後續比較有共同起點。</p>
-<p><strong>下一步：<a href="../act-2/">Act 2：找出表現不佳的地方</a>。</strong></p>
-<p><em>教學脈絡改編自<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/instructions/README.md#act-1-make-it-work">原指南 Act 1</a>。本場已改為講師課前交付；共用資源的課後清理由指定負責人處理。</em></p>
 
 
 
@@ -867,7 +687,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
     </div>
   
   

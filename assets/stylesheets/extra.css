@@ -76,6 +76,10 @@ body[data-md-color-scheme="slate"][data-md-color-primary="black"] {
   max-width: 100%;
 }
 
+.md-nav--primary > .md-nav__title {
+  display: none;
+}
+
 .md-content {
   min-width: 0;
 }
@@ -197,11 +201,11 @@ body[data-md-color-scheme="slate"][data-md-color-primary="black"] {
   }
 }
 
-/* Material's integrated TOC does not honor the home page's hide flag. */
-body:has(.workshop-home-title) .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav--secondary {
-  display: none;
-}
-
 body:has(.workshop-home-title) .md-nav--primary .md-nav__item--active > .md-nav__link {
   font-weight: 700;
+}
+
+.md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#next"]),
+body:has(.md-typeset h1[id^="act-"]) .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#troubleshooting"]) {
+  display: none;
 }
