@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Hill climbing：每一步都要重新衡量</title>
+  <desc id="desc">v2 與 v2-alt 分別從 v1 出發，只改 model。Optimizer 從選定的 baseline 提出 instructions 候選 v3。所有候選都以相同 Testing、scorecard 與 judge 衡量，不預設誰勝出。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0l8 4-8 4z" fill="#006780"/>
+    </marker>
+  </defs>
+  <rect x="2" y="2" width="1196" height="596" rx="26" fill="#f4f9fb" stroke="#c8dee5" stroke-width="2"/>
+  <path d="M28 448l170-151 117 89 148-217 176 237 143-151 190 191z" fill="#e4eff3"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif">
+    <text x="48" y="74" fill="#083b51" font-size="34" font-weight="800">不是猜誰勝出，而是知道每一步帶來什麼</text>
+    <text x="48" y="113" fill="#426477" font-size="21">Testing 題目、scorecard 與 judge 固定；相對自己的起點，只改一件事。</text>
+    <rect x="68" y="246" width="210" height="122" rx="20" fill="#083b51"/>
+    <text x="173" y="294" fill="#ffffff" font-size="30" font-weight="750" text-anchor="middle">v1</text>
+    <text x="173" y="333" fill="#ffffff" font-size="22" text-anchor="middle">先衡量起點</text>
+    <g fill="none" stroke="#006780" stroke-width="4" marker-end="url(#arrow)">
+      <path d="M292 280l92-76"/>
+      <path d="M292 330l92 76"/>
+    </g>
+    <g fill="#ffffff" stroke="#006780" stroke-width="2">
+      <rect x="405" y="160" width="260" height="120" rx="20"/>
+      <rect x="405" y="340" width="260" height="120" rx="20"/>
+    </g>
+    <g fill="#083b51" text-anchor="middle">
+      <text x="535" y="207" font-size="30" font-weight="750">v2 ?</text>
+      <text x="535" y="246" font-size="21">只改 Model Router</text>
+      <text x="535" y="387" font-size="30" font-weight="750">v2-alt ?</text>
+      <text x="535" y="426" font-size="21">只改 student model</text>
+    </g>
+    <rect x="744" y="180" width="390" height="260" rx="22" fill="#ffffff" stroke="#006780" stroke-width="2"/>
+    <text x="939" y="228" fill="#083b51" font-size="30" font-weight="750" text-anchor="middle">v3 ?</text>
+    <g fill="#426477" font-size="22" text-anchor="middle">
+      <text x="939" y="278">Optimizer 從選定的起點出發</text>
+      <text x="939" y="317">只改 instructions</text>
+      <text x="939" y="356">人審查，再做 Testing</text>
+      <text x="939" y="395">沒有維持品質，就不發布</text>
+    </g>
+    <text x="600" y="516" fill="#083b51" font-size="24" font-weight="700" text-anchor="middle">每個問號都要靠自己的結果回答；保留 v1 也可以是正確決定。</text>
+    <text x="600" y="562" fill="#426477" font-size="18" text-anchor="middle">概念示意；圖的位置不表示實際分數或相對高低。</text>
+  </g>
+</svg>

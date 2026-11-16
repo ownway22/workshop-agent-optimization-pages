@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Travel Agent</title>
+  <circle cx="48" cy="48" r="46" fill="#083b51"/>
+  <circle cx="48" cy="49" r="32" fill="#2bb5ba"/>
+  <path d="M24 32l12-8 8 5-3 10-12 2-7 11 5 10 11 1 5 13-8-3-11-14-6-15zM55 24l15 7 8 15-10 1-6-8-8-4zM59 55l13 3 4 10-12 8-7-9z" fill="#88dfc7"/>
+  <ellipse cx="48" cy="49" rx="15" ry="32" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M17 49h62M23 34h50M23 64h50" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M13 68c-6-14 2-34 20-47" fill="none" stroke="#f5c567" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 6"/>
+  <path d="M45 24l5 1 5 17 23 9-1 5-22-3-2 17-7 5-1-23-13-7 1-4 13 2z" fill="#ffffff" transform="rotate(25 49 47)"/>
+</svg>

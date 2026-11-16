@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="900" viewBox="0 0 1360 900" role="img" aria-labelledby="runtime-title runtime-desc">
+  <title id="runtime-title">Travel Agent 的請求執行與證據責任圖</title>
+  <desc id="runtime-desc">使用者經 Travel 操作網站呼叫 Hosted Agent。模型提出工具呼叫，由 Hosted Agent 的程式執行工具並讀取合成 JSON。執行追蹤記錄進入 Application Insights 與 Log Analytics，由 Insights 整理問題。評估另外擷取指定版本回答，依凍結評分表評分，再交由人審查、重測及決定。Copilot 輔助工程工作，不是旅遊請求的執行核心。</desc>
+  <defs>
+    <marker id="runtime-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto-start-reverse">
+      <path d="M0 0l8 4-8 4z" fill="#006780"/>
+    </marker>
+  </defs>
+  <rect x="2" y="2" width="1356" height="896" rx="26" fill="#f4f9fb" stroke="#c8dee5" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif">
+    <text x="40" y="52" fill="#083b51" font-size="32" font-weight="800">Travel Agent：請求怎麼走，證據怎麼回來</text>
+    <text x="40" y="88" fill="#426477" font-size="19">模型提出工具呼叫，由程式執行；資料、回答與評分都要有可追查的來源。</text>
+    <text x="40" y="154" fill="#083b51" font-size="24" font-weight="700">1｜旅遊請求與工具執行</text>
+
+    <g class="node" id="runtime-copilot">
+      <rect x="965" y="108" width="345" height="94" rx="16" fill="#e8f2f4" stroke="#b9d5df" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="985" y="137" fill="#083b51" font-size="22" font-weight="700">Copilot：工程輔助</text>
+      <text x="985" y="162" fill="#426477" font-size="18">讀文件、核對差異</text>
+      <text x="985" y="187" fill="#426477" font-size="18">不在旅遊請求的執行路徑</text>
+    </g>
+    <g class="node" id="runtime-user">
+      <rect x="40" y="230" width="180" height="100" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="60" y="270" fill="#083b51" font-size="22" font-weight="700">使用者</text>
+      <text x="60" y="302" fill="#426477" font-size="18">提出旅遊需求</text>
+    </g>
+    <g class="node" id="runtime-portal">
+      <rect x="270" y="230" width="220" height="115" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="290" y="260" fill="#083b51" font-size="22" font-weight="700">Travel 操作網站</text>
+      <text x="290" y="289" fill="#426477" font-size="18">FastAPI 網頁介面</text>
+      <text x="290" y="315" fill="#426477" font-size="18">Container Apps</text>
+    </g>
+    <g class="node" id="runtime-agent">
+      <rect x="550" y="230" width="260" height="115" rx="16" fill="#083b51" stroke="#083b51" stroke-width="2"/>
+      <text x="570" y="260" fill="#ffffff" font-size="21" font-weight="700">Foundry Hosted Agent</text>
+      <text x="570" y="289" fill="#ffffff" font-size="18">依需求執行工具</text>
+      <text x="570" y="315" fill="#ffffff" font-size="18">回傳回答與工具證據</text>
+    </g>
+    <g class="node" id="runtime-model">
+      <rect x="900" y="230" width="370" height="100" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="920" y="266" fill="#083b51" font-size="22" font-weight="700">業務模型／Model Router</text>
+      <text x="920" y="301" fill="#426477" font-size="18">決定工具呼叫與產生回答</text>
+    </g>
+    <g class="node" id="runtime-tools">
+      <rect x="550" y="400" width="260" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="570" y="430" fill="#083b51" font-size="22" font-weight="700">8 個固定資料工具</text>
+      <text x="570" y="460" fill="#426477" font-size="17">搜尋、查價、政策、收據</text>
+      <text x="570" y="488" fill="#426477" font-size="17">行程組裝、模擬預訂</text>
+    </g>
+    <g class="node" id="runtime-fixtures">
+      <rect x="900" y="400" width="370" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="920" y="433" fill="#083b51" font-size="22" font-weight="700">合成旅遊／政策／收據資料</text>
+      <text x="920" y="465" fill="#426477" font-size="18">固定 JSON；非即時旅遊 API</text>
+      <text x="920" y="492" fill="#426477" font-size="18">收據讀 JSON，不是通用 OCR</text>
+    </g>
+    <g fill="none" stroke="#006780" stroke-width="3" marker-end="url(#runtime-arrow)">
+      <path d="M224 280h42"/>
+      <path d="M494 280h52" marker-start="url(#runtime-arrow)"/>
+      <path d="M814 280h82" marker-start="url(#runtime-arrow)"/>
+      <path d="M680 349v47" marker-start="url(#runtime-arrow)"/>
+      <path d="M814 455h82" marker-start="url(#runtime-arrow)"/>
+      <path d="M380 349v25H130v-40"/>
+      <path d="M814 334h486v276H830v36"/>
+    </g>
+    <g fill="#426477" font-size="16">
+      <text x="229" y="263">需求</text>
+      <text x="503" y="263">往返</text>
+      <text x="818" y="263">模型往返</text>
+      <text x="698" y="379">呼叫／回傳</text>
+      <text x="819" y="438">讀取資料</text>
+      <text x="177" y="397">回答與工具證據</text>
+      <text x="870" y="601">指定版本擷取回答</text>
+    </g>
+    <path d="M546 320h-26v220H20v165h16" fill="none" stroke="#006780" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#runtime-arrow)"/>
+    <text x="285" y="533" fill="#426477" font-size="16">執行追蹤記錄</text>
+
+    <path d="M40 557h1270" stroke="#c8dee5" stroke-width="2"/>
+    <text x="40" y="593" fill="#083b51" font-size="24" font-weight="700">2｜觀測、評分與人工決策</text>
+    <g class="node" id="runtime-observability">
+      <rect x="40" y="650" width="280" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="60" y="685" fill="#083b51" font-size="20" font-weight="700">Application Insights</text>
+      <text x="60" y="715" fill="#426477" font-size="18">Log Analytics／追蹤證據</text>
+      <text x="60" y="742" fill="#426477" font-size="17">保留回應與執行階段證據</text>
+    </g>
+    <g class="node" id="runtime-insights">
+      <rect x="370" y="650" width="260" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="390" y="685" fill="#083b51" font-size="22" font-weight="700">Insights</text>
+      <text x="390" y="715" fill="#426477" font-size="18">從追蹤記錄整理反覆問題</text>
+      <text x="390" y="742" fill="#426477" font-size="17">人核對分析發現</text>
+    </g>
+    <g class="node" id="runtime-evaluation">
+      <rect x="680" y="650" width="300" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="700" y="685" fill="#083b51" font-size="22" font-weight="700">Rubric Evaluator</text>
+      <text x="700" y="715" fill="#426477" font-size="18">已擷取回答＋凍結評分表</text>
+      <text x="700" y="742" fill="#426477" font-size="17">評分模型判讀，人工抽查</text>
+    </g>
+    <g class="node" id="runtime-decision">
+      <rect x="1030" y="650" width="280" height="110" rx="16" fill="#ffffff" stroke="#b9d5df" stroke-width="2"/>
+      <text x="1050" y="685" fill="#083b51" font-size="22" font-weight="700">人工比較與決策</text>
+      <text x="1050" y="715" fill="#426477" font-size="18">審查有效候選、同題重測</text>
+      <text x="1050" y="742" fill="#426477" font-size="17">選擇發布、保留或待補證據</text>
+    </g>
+    <g fill="none" stroke="#006780" stroke-width="3" marker-end="url(#runtime-arrow)">
+      <path d="M324 705h42"/>
+      <path d="M634 705h42" stroke-dasharray="7 5"/>
+      <path d="M984 705h42"/>
+    </g>
+    <g fill="#426477" font-size="16">
+      <text x="328" y="688">分析</text>
+      <text x="637" y="688">依據</text>
+      <text x="987" y="688">比較</text>
+    </g>
+    <text x="40" y="827" fill="#083b51" font-size="19" font-weight="650">實線：呼叫或資料流；虛線：觀測或審閱依據。評分使用指定版本的實際回答，不是只看操作網站。</text>
+    <text x="40" y="865" fill="#426477" font-size="17">責任與證據來源示意，不代表工作會自動串接、已部署或已放行；有效候選仍須人工審查與同題重測。</text>
+  </g>
+</svg>

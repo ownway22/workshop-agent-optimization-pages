@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+  <title id="title">Travel Agent 的四幕改善流程</title>
+  <desc id="desc">Act 1 建立 v1，Act 2 使用 trace 與 Insights，Act 3 用相同 scorecard 比較單步變更，Act 4 由 optimizer 提出候選，再經人審查與 Testing 決定。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0l8 4-8 4z" fill="#006780"/>
+    </marker>
+  </defs>
+  <rect x="2" y="2" width="1276" height="616" rx="28" fill="#f4f9fb" stroke="#c8dee5" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif">
+    <text x="56" y="78" fill="#083b51" font-size="38" font-weight="800">Travel Agent 的改善計畫</text>
+    <text x="56" y="116" fill="#426477" font-size="22">政策與品質優先，以證據衡量速度與成本</text>
+    <g fill="#ffffff" stroke="#b9d5df" stroke-width="2">
+      <rect x="56" y="156" width="250" height="282" rx="22"/>
+      <rect x="362" y="156" width="250" height="282" rx="22"/>
+      <rect x="668" y="156" width="250" height="282" rx="22"/>
+      <rect x="974" y="156" width="250" height="282" rx="22"/>
+    </g>
+    <g fill="#006780">
+      <circle cx="99" cy="205" r="25"/>
+      <circle cx="405" cy="205" r="25"/>
+      <circle cx="711" cy="205" r="25"/>
+      <circle cx="1017" cy="205" r="25"/>
+    </g>
+    <g fill="#ffffff" font-size="24" font-weight="700" text-anchor="middle">
+      <text x="99" y="213">1</text>
+      <text x="405" y="213">2</text>
+      <text x="711" y="213">3</text>
+      <text x="1017" y="213">4</text>
+    </g>
+    <g fill="#083b51" font-size="26" font-weight="750">
+      <text x="80" y="268">先讓它運作</text>
+      <text x="386" y="268">找出問題</text>
+      <text x="692" y="268">讓它更好</text>
+      <text x="998" y="268">擴大改善規模</text>
+    </g>
+    <g fill="#426477" font-size="21">
+      <text x="80" y="316">Hosted Agent v1</text>
+      <text x="80" y="351">健康檢查</text>
+      <text x="80" y="386">四個旅遊情境</text>
+      <text x="386" y="316">Trace 與 Insights</text>
+      <text x="386" y="351">重複提問</text>
+      <text x="386" y="386">理解反覆失敗</text>
+      <text x="692" y="316">固定的 scorecard</text>
+      <text x="692" y="351">Model Router</text>
+      <text x="692" y="386">單步變更與比較</text>
+      <text x="998" y="316">Agent Optimizer</text>
+      <text x="998" y="351">人工審查候選</text>
+      <text x="998" y="386">重新 Testing</text>
+    </g>
+    <g fill="none" stroke="#006780" stroke-width="4" marker-end="url(#arrow)">
+      <path d="M318 294h30"/>
+      <path d="M624 294h30"/>
+      <path d="M930 294h30"/>
+    </g>
+    <rect x="56" y="480" width="1168" height="70" rx="18" fill="#083b51"/>
+    <text x="640" y="524" fill="#ffffff" font-size="24" font-weight="650" text-anchor="middle">觀察 → 理解 → 衡量 → 只改一件事 → 重新測試 → 人工決定 → 重複</text>
+    <text x="640" y="588" fill="#426477" font-size="18" text-anchor="middle">流程示意；不是實際分數、已部署環境或真實預訂結果。</text>
+  </g>
+</svg>

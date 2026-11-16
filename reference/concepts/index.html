@@ -1,0 +1,1067 @@
+<!DOCTYPE html><html lang="zh-TW" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="使用 Microsoft Foundry 與 GitHub Copilot，走過觀察、衡量、單步改善與人工決策的四幕旅程。">
+      
+      
+      
+        <link rel="canonical" href="https://ownway22.github.io/workshop-agent-optimization-pages/reference/concepts/">
+      
+      
+        <link rel="prev" href="../../getting-started/">
+      
+      
+        <link rel="next" href="../../act-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/travel.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>核心概念 - Travel Agent 的改善計畫</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#核心概念與題組" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../.." title="Travel Agent 的改善計畫" class="md-header__button md-logo" aria-label="Travel Agent 的改善計畫" data-md-component="logo">
+      
+  <img src="../../assets/images/travel.png" alt="logo" width="512" height="512" class="no-lightbox off-glb">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Travel Agent 的改善計畫
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              核心概念
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="cyan" aria-label="切換深色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切換深色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="cyan" aria-label="切換淺色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切換淺色模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Travel Agent 的改善計畫" class="md-nav__button md-logo" aria-label="Travel Agent 的改善計畫" data-md-component="logo">
+      
+  <img src="../../assets/images/travel.png" alt="logo" width="512" height="512" class="no-lightbox off-glb">
+
+    </a>
+    Travel Agent 的改善計畫
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    導覽
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    準備
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核心概念
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核心概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="本頁目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      本頁目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#四幕改善流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四幕改善流程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hill-climbing用同一個高度計" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hill climbing：用同一個高度計
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常用詞彙" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用詞彙
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        請求與證據的責任分工
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionlabel-與-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本、標籤與端點
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三組題目三種用途" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三組題目，三種用途
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#比較時要看什麼" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        比較時要看什麼？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repo-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        補充：Repo 與編號怎麼對照
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下一步
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../act-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 1：先讓它運作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../act-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 2：找出表現不佳的地方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../act-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 3：讓它更好
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../act-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 4：擴大改善規模
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review-and-conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回顧與結論
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    疑難排解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources-and-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    資源與授權
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="核心概念與題組">核心概念<a class="headerlink" href="#核心概念與題組" title="Permanent link">¶</a></h1>
+<p>看懂版本、執行追蹤記錄與題組，才不會把一次好回答誤認為可持續的改善。以下詞彙以繁體中文說明；產品名稱、介面標籤、檔名與 CLI 參數保留原文，方便對照實際操作。</p>
+<h2 id="四幕改善流程">四幕改善流程<a class="headerlink" href="#四幕改善流程" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/travel-agent-flow.svg" data-title="Travel Agent 四幕改善流程：建立 v1、以執行追蹤記錄與 Insights 找出問題、用相同評分表比較單步變更，再由 Agent Optimizer 提出候選方案並交由人決定" data-desc-position="bottom"><img alt="Travel Agent 四幕改善流程：建立 v1、以執行追蹤記錄與 Insights 找出問題、用相同評分表比較單步變更，再由 Agent Optimizer 提出候選方案並交由人決定" class="diagram" decoding="async" height="620" loading="lazy" src="../../assets/images/travel-agent-flow.svg" width="1280"></a></p>
+<p><em>四幕流程示意；本場 Act 1 是講師課前基準，課堂主線是 Act 2–4。點擊圖片可放大，以 Esc 或關閉按鈕返回。這不是已部署環境、實際分數或執行結果。</em></p>
+<h2 id="hill-climbing用同一個高度計">Hill climbing：用同一個高度計<a class="headerlink" href="#hill-climbing用同一個高度計" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/hill-climbing.svg" data-title="Hill climbing 的單步比較示意：從 v1 分別嘗試 Model Router 與微調模型，將審查過的行為指示候選方案重新以 Testing 衡量；每個方向都可能上升或下降" data-desc-position="bottom"><img alt="Hill climbing 的單步比較示意：從 v1 分別嘗試 Model Router 與微調模型，將審查過的行為指示候選方案重新以 Testing 衡量；每個方向都可能上升或下降" class="diagram" decoding="async" height="600" loading="lazy" src="../../assets/images/hill-climbing.svg" width="1200"></a></p>
+<p><em>這張原版概念圖包含學生模型支線；本場只操作 v1、Balanced Router v2 與行為指示候選方案 v3，不執行模型訓練。圖的位置不表示實際分數或勝出版本；點擊可放大。</em></p>
+<ol>
+<li><strong>知道起點：</strong>用固定評分表與 Testing 題組評分 v1。</li>
+<li><strong>只走一步：</strong>只改模型、行為指示或工具／資料中的一項。</li>
+<li><strong>用同一個高度計：</strong>Testing 題組、評分表與評分模型都保持一致。</li>
+<li><strong>往上就保留，不然退回：</strong>結果不符合需求時，維持已驗證的版本。</li>
+<li><strong>重複：</strong>下一個實驗也要有明確起點與獨立比較。</li>
+</ol>
+<p>向下的一步不是沒用：它會告訴我們，對這個工作負載而言，哪個方向不值得直接採用。</p>
+<h2 id="常用詞彙">常用詞彙<a class="headerlink" href="#常用詞彙" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>詞彙</th>
+<th>在本課程的意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agent</strong></td>
+<td>透過模型、行為指示與工具處理旅遊需求的助理。</td>
+</tr>
+<tr>
+<td><strong>模型（model）</strong></td>
+<td>產生回答、判斷或工具呼叫的 AI 模型；不是 Agent 的版本標籤。</td>
+</tr>
+<tr>
+<td><strong>基準版本（baseline）</strong></td>
+<td>每次實驗要拿來比較的起點，不一定永遠是 v1。</td>
+</tr>
+<tr>
+<td><strong>候選方案（candidate）</strong></td>
+<td>待審查、部署與重新評估的變更提案，不等於已上線版本。</td>
+</tr>
+<tr>
+<td><strong>Agent 行為指示（instructions）</strong></td>
+<td>規範 Agent 如何處理需求與使用工具的內容；不是要在 Terminal 執行的命令。</td>
+</tr>
+<tr>
+<td><strong>工具回傳結果（tool result）</strong></td>
+<td>工具實際回傳的結果；不能用 Agent 的樂觀敘述取代它。</td>
+</tr>
+<tr>
+<td><strong>執行追蹤記錄（trace）</strong></td>
+<td>一次回答的逐步紀錄：工具呼叫、回傳結果、延遲與 Token 用量。</td>
+</tr>
+<tr>
+<td><strong>延遲（latency）</strong></td>
+<td>一次回答所花的時間，與評分服務的處理時間分開看。</td>
+</tr>
+<tr>
+<td><strong>Token 用量（tokens）</strong></td>
+<td>模型處理與產生文字的用量，不是完整帳單。</td>
+</tr>
+<tr>
+<td><strong>Insights 分析發現（findings）</strong></td>
+<td>從大量執行追蹤記錄歸納的反覆問題與證據。</td>
+</tr>
+<tr>
+<td><strong>評分表（scorecard）</strong></td>
+<td>本課程對 Rubric Evaluator 的稱呼；包含評分規準（rubric）的面向與權重，對應業務與政策需求，版本依本組凍結的 evaluator 記錄。</td>
+</tr>
+<tr>
+<td><strong>評分模型（judge）</strong></td>
+<td>依固定評分表判讀回答的模型，本場使用 <code>gpt-5-mini</code>。</td>
+</tr>
+<tr>
+<td><strong>Model Router</strong></td>
+<td>透過單一模型部署，為每個請求選擇模型。</td>
+</tr>
+<tr>
+<td><strong>教師／學生模型（teacher／student）</strong></td>
+<td>原版延伸路線的回答提供者與受訓模型；本場不執行。</td>
+</tr>
+<tr>
+<td><strong>Agent Optimizer</strong></td>
+<td>提出行為指示候選方案，以練習題試跑；不取代人的發布決策。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="runtime-evidence">請求與證據的責任分工<a class="headerlink" href="#runtime-evidence" title="Permanent link">¶</a></h2>
+<p>想讓團隊少一點猜測，先分清楚誰回答、誰查資料、誰保留證據、誰決定採用。<strong>模型提出工具呼叫，由 Hosted Agent 裡的程式執行；Copilot 輔助工程工作，不是旅遊請求的執行核心。</strong></p>
+<details class="note">
+<summary>展開：本場執行與證據架構</summary>
+<p><a class="glightbox" data-desc-position="bottom" data-title="Travel Agent：請求與證據的責任分工" data-type="image" data-width="auto" href="../../assets/images/travel-runtime-evidence.svg"><img alt="Travel 請求由操作網站進入 Hosted Agent，分別與模型、工具及合成資料互動；追蹤記錄供 Insights 分析，指定版本回答依凍結評分表評分，再由人審查重測及決策；Copilot 位於工程輔助路徑" class="diagram" decoding="async" height="900" loading="lazy" src="../../assets/images/travel-runtime-evidence.svg" width="1360"></a></p>
+<p>靜態責任圖，依本場程式與流程整理；不是即時部署或放行狀態。Agent Framework／Responses 負責 Agent 執行，FastAPI 操作網站呈現回答及工具證據；Application Insights／Log Analytics 保留觀測資料，評分則使用擷取的實際回答與凍結評分表。圖中的箭頭不代表這些工作會自動連續執行。</p>
+<p>實際請求要核對回應的執行版本；分析還要核對時間窗與來源；評估要固定題組、評分表及評分模型。網站有畫面，不等於這三項都完成。</p>
+</details>
+<details class="note">
+<summary>展開：八個工具與資料邊界</summary>
+<p>下列六類共 <strong>8 個工具</strong>。它們讓案例能重複核對，不是連接真實航空公司或工廠系統的服務：</p>
+<table>
+<thead>
+<tr>
+<th>類別與數量</th>
+<th>做什麼</th>
+<th>解讀結果時的邊界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搜尋，3 個</td>
+<td>查詢航班、飯店與租車選項。</td>
+<td>只查合成庫存，不是即時票價、空房或車輛供應。</td>
+</tr>
+<tr>
+<td>查價，1 個</td>
+<td>依既有資料 ID 取回價格與屬性。</td>
+<td>不是外部即時報價；固定匯率是為了重複核對，不是金融行情。</td>
+</tr>
+<tr>
+<td>政策，1 個</td>
+<td>依範例規則判斷並回傳政策依據。</td>
+<td>涵蓋工具已實作的規則，不是完整企業合規引擎或真實核准。</td>
+</tr>
+<tr>
+<td>收據，1 個</td>
+<td>依收據 ID 或對應檔名讀取結構化 JSON，檢查費用項目。</td>
+<td>不是通用 OCR；找不到固定資料就回報錯誤，不能推論已能處理任意收據圖片。</td>
+</tr>
+<tr>
+<td>行程組裝，1 個</td>
+<td>組合已選項目與估價。</td>
+<td>目前每筆飯店只加一晚、租車只加一天；收據不併入估價，不能直接視為完整多日或含報銷總價。</td>
+</tr>
+<tr>
+<td>模擬預訂，1 個</td>
+<td>依行程與政策檢查結果，回傳模擬接受或拒絕。</td>
+<td>真實預訂被停用；模擬成功不等於出票、付款或企業工作流程已執行。</td>
+</tr>
+</tbody>
+</table>
+<p>固定資料與工具<strong>不代表模型的選擇、推理與回答必然固定</strong>，所以仍需重複觀察及公平比較。閱讀本機教材不需 Azure；執行線上 Agent、評分或分析仍需真實服務，現場與預跑結果要分開標示。</p>
+<p>對照設備維護資訊助理，可轉移的是「查明資料與工具契約，再判讀輸出」的方法；這張表不表示本場已具備設備知識檢索、派工或設備控制功能。</p>
+</details>
+<h2 id="versionlabel-與-endpoint">版本、標籤與端點<a class="headerlink" href="#versionlabel-與-endpoint" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>版本（version）：</strong>一次部署的不可變快照，包含該次的模型、行為指示與設定。</li>
+<li><strong>標籤（label）：</strong>方便辨識變更的名稱，例如 v1、v2、v3；腳本記住它對應的實際版本。</li>
+<li><strong>端點（endpoint）：</strong>同一個 Agent 的固定 URL；使用中版本（active version）決定預設流量由誰回答。</li>
+</ul>
+<p>部署新版本不會覆寫舊版，也不是建立第二個端點。<strong>版本編號不等於標籤</strong>：假設 v1 標籤對應實際版本 2，不能因此把它稱為 v2。這只是編號示例；實際對應以本組交付紀錄為準。</p>
+<table>
+<thead>
+<tr>
+<th>標籤</th>
+<th>相對起點改了什麼</th>
+<th>建立方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v1</code></td>
+<td>起點，<code>gpt-5</code>。</td>
+<td>講師課前建立與驗證。</td>
+</tr>
+<tr>
+<td><code>v2</code></td>
+<td>相對 v1，只改模型為受限的 Balanced Router。</td>
+<td>本組放行後，由當輪操作者執行 Script 08。</td>
+</tr>
+<tr>
+<td><code>v3</code></td>
+<td>相對選定起點，只改人審查過的行為指示。</td>
+<td>本輪已有有效候選方案且獲准後，執行 Script 11 <code>deploy</code>。</td>
+</tr>
+</tbody>
+</table>
+<p>其他標籤屬於<a href="../resources-and-license/#original-extensions">原版延伸</a>，不是本場需要建立的版本。<strong>標籤、請求參數與 CLI 成功都不能證明服務真的執行該版本</strong>；須以實際回應與執行階段紀錄核對。版本不符的擷取結果要隔離，不能換個標籤後繼續評分。</p>
+<div class="admonition important">
+<p class="admonition-title">評分和上線是不同操作</p>
+<p>腳本可明確呼叫某個版本評分，而讓操作網站繼續使用原版。<code>go-live</code> 才是切換使用中版本；切換後開新對話，避免把舊對話當成新版結果。部分腳本提供 <code>--activate</code>，未獲授權不要自行使用。</p>
+</div>
+<h2 id="三組題目三種用途">三組題目，三種用途<a class="headerlink" href="#三組題目三種用途" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>題組</th>
+<th style="text-align: right;">題數</th>
+<th>用途</th>
+<th>不可以拿來做什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exploring</strong></td>
+<td style="text-align: right;">36，簡單／中等／困難各 12。</td>
+<td>觀察 v1，產生 Insights 與評分表草擬依據。</td>
+<td>代替最終 Testing 評分。</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td style="text-align: right;">原版 48，含 40 train / 8 validation。</td>
+<td>原版 fine-tuning 延伸；本場不執行。</td>
+<td>混入本場 Testing 比較。</td>
+</tr>
+<tr>
+<td><strong>Testing</strong></td>
+<td style="text-align: right;">完整題集 24，簡單／中等／困難各 8。</td>
+<td>完整預跑用 24 題三次；本場課堂固定各難度前兩題，共六題一次。</td>
+<td>混入 practice、training 或教 agent 背答案。</td>
+</tr>
+</tbody>
+</table>
+<p>Exploring 前 12 題標記為練習題（practice），包含操作網站的四個情境，供 Agent Optimizer 使用。Testing 使用其他題組未出現過的城市與收據，檢查是否能處理新情況。</p>
+<p><strong>題集規模與重複次數都屬於比較條件。</strong> <code>full</code> 的 24 題三次與 <code>classroom</code> 的六題一次分開保存，不能互相比高低。相同評估題組（cohort）還要固定評分表版本與評分模型；詳見<a href="../../getting-started/#cohorts">本場題量</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">Testing 也要避免過度迎合</p>
+<p>同一題組是公平比較的基礎，但若持續根據 Testing 答案修改行為指示，仍可能過度迎合。不要把 Testing 題目加入 Agent Optimizer 的練習題或學生模型的訓練資料；新的業務需求也可能需要新的保留評估資料。</p>
+</div>
+<h2 id="比較時要看什麼">比較時要看什麼？<a class="headerlink" href="#比較時要看什麼" title="Permanent link">¶</a></h2>
+<ol>
+<li>先核對差旅政策與關鍵 hard gates，不能只看平均分數。</li>
+<li>看最弱面向與簡單／中等／困難，避免少數好回答掩蓋退步。</li>
+<li>檢查多輪差異，不把微小變化直接當成穩定提升。</li>
+<li>分清楚品質、延遲、Token 用量與實際費用。模型價格、部署層級與其他 Azure 資源也會影響帳單。</li>
+<li>每個比較都對照自己的起始版本，而不是只把標籤排成一張勝負表。</li>
+</ol>
+<h2 id="repo-map">補充：Repo 與編號怎麼對照<a class="headerlink" href="#repo-map" title="Permanent link">¶</a></h2>
+<p>主線先學會判讀與決策；需要追查資料或程式時，再展開下面的索引。路徑以<strong>主要 VM 的第二場專案根目錄</strong>為準，不是網站目錄。</p>
+<details class="note">
+<summary>展開：常用檔案、用途與操作界線</summary>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>用來找什麼</th>
+<th>本場怎麼使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/fixtures/</code></td>
+<td>合成庫存、政策、收據與匯率。</td>
+<td>學員核對來源，不直接改資料追求高分；部署產生的複本不是修改來源。</td>
+</tr>
+<tr>
+<td><code>data/questions/</code></td>
+<td>Exploring、Training、Testing 題集。</td>
+<td>核對題目來源；課堂六題依既定規則選取，不將 Testing 轉成練習或訓練資料。</td>
+</tr>
+<tr>
+<td><code>data/scorecard-guidance.json</code></td>
+<td>產生評分表時的業務指引。</td>
+<td>指引不等於最後凍結的 evaluator；課堂審閱交付副本，不自行重新生成。</td>
+</tr>
+<tr>
+<td><code>src/agent/.agent_configs/</code></td>
+<td>基準與已下載候選方案的行為指示、模型設定。</td>
+<td>閱讀本輪獲准檔案、比較差異；不覆寫基準或自行部署。</td>
+</tr>
+<tr>
+<td><code>src/agent/tools/</code></td>
+<td>八個工具的實作與契約。</td>
+<td>有疑問先留證據交給負責人，本場不另開工具修改實驗。</td>
+</tr>
+<tr>
+<td><code>infra/</code>、<code>src/scripts/</code></td>
+<td>操作入口與擷取、評分、比較等輔助程式。</td>
+<td>使用完成驗證並交付的本場入口；看到檔名不等於獲准執行。</td>
+</tr>
+<tr>
+<td>講師交付的本組受控匯出結果</td>
+<td>回答、追蹤、評分表、比較與工作狀態。</td>
+<td>學員讀去秘密副本；原始 <code>.azure/&lt;env&gt;/</code> 留在主要工作副本，不散發整個教師部署目錄或登入快取。</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>展開：Act／教學 Step／腳本編號</summary>
+<p>原版教學 Step 與腳本編號<strong>不是同一套數字</strong>。下表只是找原始碼的對照，不是新增命令清單：</p>
+<table>
+<thead>
+<tr>
+<th>本網站位置</th>
+<th>對應腳本</th>
+<th>本場界線</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Act 2，Step 3</td>
+<td><code>infra/04-run-questions.sh</code></td>
+<td>完整探索由講師預跑；課堂是四個具名 Portal 情境，不用題集前四列冒充。</td>
+</tr>
+<tr>
+<td>Act 2，Step 4</td>
+<td><code>infra/05-insights.sh</code></td>
+<td>本組放行且分析範圍明確後，才提交一次受控分析。</td>
+</tr>
+<tr>
+<td>Act 3，Step 5</td>
+<td><code>infra/06-scorecard.sh</code></td>
+<td>對照原版評分表生成工具；本場課堂只審閱講師交付的凍結版本。</td>
+</tr>
+<tr>
+<td>Act 3，Step 6／9</td>
+<td><code>infra/07-score.sh</code></td>
+<td>評分與比較是不同操作，皆指定本組環境及 <code>classroom</code>。</td>
+</tr>
+<tr>
+<td>Act 3，Step 7</td>
+<td><code>infra/08-model-router.sh</code></td>
+<td>只使用本場已核准的 Balanced Router，不新增 Quality 模式。</td>
+</tr>
+<tr>
+<td>Act 4，Step 10</td>
+<td><code>infra/10-optimize.sh</code></td>
+<td>區分提交、查狀態與下載；取消、在途或未放行時不重送。</td>
+</tr>
+<tr>
+<td>Act 4，Step 10（候選採用段落）</td>
+<td><code>infra/11-promote.sh</code></td>
+<td>只有有效且已審查候選，才按授權部署、重測及決定是否切換。</td>
+</tr>
+</tbody>
+</table>
+<p>這些入口依賴本場來源、Client 與線上驗證門檻；不因讀完索引而解除。原版整套 setup／teardown、微調及其他延伸仍不在學員操作範圍。</p>
+</details>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p><strong>下一步：<a href="../../act-1/">Act 1：先讓它運作</a>。</strong> 先確認本組課前基準，再依序進入 Act 2–4。</p>
+<p><em>題組來源：<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/data/README.md">原 repo Data 說明</a>。</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。<br> 改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "toc.follow", "toc.integrate", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../assets/javascripts/standard-1.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
