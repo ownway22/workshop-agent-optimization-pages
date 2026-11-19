@@ -214,8 +214,7 @@ body:has(.workshop-home-title) .md-nav--primary .md-nav__item--active > .md-nav_
 }
 
 .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#next"]),
-body:has(.md-typeset h1[id^="act-"]) .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#troubleshooting"]),
-body:has(.md-typeset h1[id="回顧與結論"]) .md-sidebar--primary .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#授權"]) {
+body:has(.md-typeset h1[id^="act-"]) .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#troubleshooting"]) {
   display: none;
 }
 

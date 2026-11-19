@@ -555,6 +555,43 @@
 <p>點選 Insights 頁面，選取左側的一項分析發現，再於右側查看說明、關聯 Trace 與 <strong>Proposed fix</strong>，理解可採取的改善行動。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/agent%20insights.png" data-title="Insights 分析介面：左側選取問題，右側查看說明、關聯追蹤記錄與 Proposed fix" data-desc-position="bottom"><img alt="Insights 分析介面：左側選取問題，右側查看說明、關聯追蹤記錄與 Proposed fix" class="agent%20insights" decoding="async" height="941" loading="lazy" src="../assets/images/agent%20insights.png" width="1672"></a></p>
 <p><em>圖 2：Insights 介面參考。</em></p>
+<p>以下依五張 Insights 畫面，整理 <code>contoso-travel</code> 的問題情境、肇因與具體改善建議。這些是待驗證的修正方向，需回到關聯 Trace、工具契約與指令確認；其中第三、第五項尚未確認安全修法，不應直接放寬合規規則。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>肇因</th>
+<th>具體建議</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1．重複傳送大型提示詞，增加 Token 成本</strong>：每次內部模型呼叫都附上完整靜態指令。</td>
+<td>提示詞組裝層重複傳送大型 system／developer instructions，未依子任務縮減必要上下文。</td>
+<td>精簡子模型提示詞，只保留必要指令與動態資料；對必須重複的靜態內容，使用平台支援的 prompt caching 或上下文重用，不能假設只傳 context ID 就能取得內容。以相同任務確認結果與必要工具流程不變，並比較 Token 用量與實際費用。</td>
+</tr>
+<tr>
+<td><strong>2．重複呼叫工具，且擅自修改參數</strong>：重複搜尋或政策檢查，填入 <code>EMP-UNKNOWN</code>，重試時改動篩選條件。</td>
+<td>工具編排層缺少單次請求內的結果重用、參數驗證，以及重試與平行派送時的參數一致性控制。</td>
+<td>對同一請求內、相同工具與參數的唯讀查詢重用結果；未知的選填員工 ID 應省略，必填資訊則要求補充，不要捏造。保留原始搜尋條件，僅在明確要求重新搜尋時變更；確認不再出現無意義的重複呼叫或參數漂移。</td>
+</tr>
+<tr>
+<td><strong>3．政策檢查完成，訂位仍被擋下</strong>：已呼叫 <code>check_travel_policy</code>，但 <code>submit_booking</code> 拒絕訂位。</td>
+<td><code>compliance_summary</code> 缺漏或格式不符，未帶入各旅程項目的政策證據；文件與實際驗證規則也可能不一致。</td>
+<td>先核對兩個工具的 schema 與必填規則，再將政策結果映射為訂位所需的結構，送出前進行驗證。格式錯誤須明確回報，不可編造證據或放寬檢查；確認合規且證據完整的訂位可成功，真正不合規的訂位仍被阻擋。</td>
+</tr>
+<tr>
+<td><strong>4．模型呼叫被取消，必要飯店搜尋未執行</strong>：尚未呼叫 <code>search_hotels</code> 就中止。</td>
+<td>模型執行期間發生 <code>CancelledError</code>，編排層未完成必要搜尋，也未提供適當的恢復或失敗回報。</td>
+<td>區分使用者主動取消、逾時與服務異常；僅對可恢復的暫時性失敗採有限次重試與退避。回覆前檢查必要搜尋是否成功，未完成時明確告知，不能憑空提供飯店結果；確認暫時性故障可恢復，使用者取消則確實停止。</td>
+</tr>
+<tr>
+<td><strong>5．最終答案漏掉固定合規句，或錯誤插入</strong>：工具結果正常，但回覆未正確呈現允許證據。</td>
+<td>回覆模板未依政策結果控制固定文句，導致改寫、漏寫，或在沒有對應允許證據時仍插入。</td>
+<td>核對固定文句契約；當對應項目的政策結果為 <code>hard_gate_blocked=false</code> 且 <code>cited_rule_ids=[]</code> 時，在政策決策與證據區段原樣輸出 <code>Allowed; policy tool returned no blocking CT rule.</code>，不能改寫或無條件套用。確認符合條件時逐字出現，沒有對應允許證據時不得出現。</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
 <p>進入：<a href="../act-3/">Act 3：讓它更好</a>。</p>
