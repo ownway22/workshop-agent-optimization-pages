@@ -46,6 +46,8 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../assets/stylesheets/core-technologies-table.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -449,17 +451,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -471,10 +462,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        步驟
       
     </span>
   </a>
@@ -482,10 +473,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -546,48 +537,22 @@
 
 <h1 id="act-4擴大改善規模">Act 4：擴大改善規模<a class="headerlink" href="#act-4擴大改善規模" title="Permanent link">¶</a></h1>
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>讓 <strong>Agent Optimizer</strong> 提出 Agent 行為指示（instructions）的調整，用練習題（practice）挑選候選方案（candidate），再用相同 Testing 題組重新驗證。自動化不應跳過人工審查，也不應讓未驗證的版本意外上線。這一步的業務意義，是讓改版有理由、審查有依據、決策可追溯；有效比較後保留原版，與證據不足而尚不能決策，也要分清楚。</p>
-<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1核對本輪工作">1．核對本輪工作<a class="headerlink" href="#1核對本輪工作" title="Permanent link">¶</a></h3>
-<p>在本組 Foundry 的 <strong>contoso-travel → Optimize</strong> 或已交付的 <code>status</code> 輸出中，證據檢視者核對起始標籤／實際版本、工作 ID、12 道練習題、評分表與完成狀態。取消、失敗或狀態不明就記錄並停止，不因看到候選方案名稱就執行 <code>apply</code>。</p>
-<h3 id="2開啟真實差異">2．開啟真實差異<a class="headerlink" href="#2開啟真實差異" title="Permanent link">¶</a></h3>
-<p>本輪已有有效候選方案並獲准下載後，當輪操作者在 VS Code Explorer 對起點保留的行為指示檔案選 <strong>Select for Compare</strong>，再對本輪候選檔案選 <strong>Compare with Selected</strong>。指示檢視者逐項說明變更對應哪項有效分析發現／追蹤記錄；只讀取差異，不覆寫基準或自行接受全部變更。</p>
-<h3 id="3重測並作決定">3．重測並作決定<a class="headerlink" href="#3重測並作決定" title="Permanent link">¶</a></h3>
-<p>只有候選方案、部署與實際版本均通過檢核，才接續 Step 11。紀錄者將相同六題一次的結果整理成比較紀錄，全組提出發布或保留理由，再交由獲授權者決定是否切換。沒有有效候選方案時就記錄阻礙，不製作假差異畫面或分數。</p>
+<p>給定相同的 Rubric evaluator/ scorecard、測試題目，使用 <strong>Agent Optimizer</strong> 最佳化 Agent 的整體配置，並提供 agent 的候選版本。秉持 <strong>改版有理由、審查有依據、決策可追溯</strong>，協助 AI 開發者決定是否採用最佳化後的 agent 候選。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
-<p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能指出 Agent Optimizer 起點、候選方案與其處理的 Insights 問題。</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 理解 Agent Optimizer 起點、候選方案與其處理的 Insights 問題。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已區分 12 道練習題、課堂六題一次與完整 24 題三次，不混用其分數。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能說明建立版本、Foundry 顯示 <code>promoted</code> 與端點上線的差別。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 有保留或發布的實際證據與理由；未執行的部署、選做或切換不算已完成。</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 理解授權者決定是否上線，並維持題組隔離與單步實驗契約。</li>
 </ul>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1使用-optmize-功能找出潛在的最佳候選-agent">1．使用 Optmize 功能找出潛在的最佳候選 agent<a class="headerlink" href="#1使用-optmize-功能找出潛在的最佳候選-agent" title="Permanent link">¶</a></h3>
+<p>進入您的 Foundry project (<code>proj-opt-g0*</code>)，依序點選 <strong>Agents → contoso-travel → Optimize → 特定 Run ID (Status == Succeeded)</strong>，以檢視起始候選 agent 設定、Score、Avg tokens、Avg latency等資訊。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/agent%20optimization.png" data-title="agent optimization" data-desc-position="bottom"><img alt="agent optimization" class="agent%20optimization" decoding="async" height="941" loading="lazy" src="../assets/images/agent%20optimization.png" width="1672"></a></p>
+<p><br></p>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
 <p>進入：<a href="../reference/review-and-conclusion/">結論</a>。</p>
-<h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>狀況</th>
-<th>下一步</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>工作只有提交、尚未完成</td>
-<td>記錄目前狀態，不重複提交，也不宣稱已取得候選分數。</td>
-</tr>
-<tr>
-<td>練習題提升但 Testing 未維持</td>
-<td>保留已驗證的版本，不以示範分數取代本次結果。</td>
-</tr>
-<tr>
-<td>部署中斷或操作網站版本不符</td>
-<td>由獲授權者確認原先使用中的版本標籤，再依<a href="../reference/troubleshooting/">疑難排解</a>處理。</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -623,7 +588,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a> · © Microsoft · 教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a> · 更新日期：2026-11-18
     </div>
   
   

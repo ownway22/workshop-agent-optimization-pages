@@ -46,6 +46,8 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../assets/stylesheets/core-technologies-table.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -368,17 +370,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -390,10 +381,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        步驟
       
     </span>
   </a>
@@ -401,10 +392,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -548,110 +539,56 @@
 <div id="這一幕的目標" class="anchor-alias"></div>
 
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>我們正在 hill climbing 的起點位置，這一步的意義是先說清楚助理能幫什麼、哪部分仍需人接手，讓後續比較有共同起點。確認講師已交付的 Travel Agent、Travel 操作網站與 v1 基準版本（baseline）的證據。本場 v1 使用 <code>gpt-5</code>；學員不重建環境。這一步回答「起點是什麼」，還沒有回答「每次都能不能做好」。</p>
+<p>我們正在 hill climbing 的起點位置——理解<strong>差旅助理的能力</strong>，並搭配實際操作 Travel 操作網站，認識 Travel Agent。</p>
 <p><br></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/Slide44.png" data-title="Slide44" data-desc-position="bottom"><img alt="Slide44" class="Slide44" fetchpriority="high" height="1100" loading="eager" src="../assets/images/Slide44.png" width="2200"></a></p>
-<p><br></p>
+<p><em>圖片 1：Hill climbing 概念的示意圖</em></p>
+<h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已逐一核對四個情境的決策橫幅、政策與工具回傳結果，或明確記錄缺少哪些證據。</li>
+</ul>
 <h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
 <h3 id="1找到本組操作網站">1．找到本組操作網站<a class="headerlink" href="#1找到本組操作網站" title="Permanent link">¶</a></h3>
-<p>在 Ubuntu 桌面內的瀏覽器開啟講師交付的 Travel 網址，由本人完成登入；不是教材網站，也不是上一場 Factory 操作介面。401／403 或網址不符時停下來請講師處理。</p>
+<p>在遠端桌面的桌面中，開啟 <strong>參賽者資訊.md 檔案=&gt; 4. Agent Optimization (Lab 2)=&gt; Travel Concierge Portal 網站</strong>，並完成登入。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/reference-portal.png" data-title="原版 Travel 操作網站介面：左側選擇情境與送出請求，右側顯示推薦、政策與結果，右上角為執行階段資訊" data-desc-position="bottom"><img alt="原版 Travel 操作網站介面：左側選擇情境與送出請求，右側顯示推薦、政策與結果，右上角為執行階段資訊" decoding="async" height="1080" loading="lazy" src="../assets/images/reference-portal.png" width="1920"></a></p>
-<p><em>圖片1：差旅規範與建議</em></p>
+<p><em>圖片 2：Caldova 公司的差旅入口網站，用於說明差旅規範與建議</em></p>
+<h3 id="2執行四個情境">2．執行四個情境<a class="headerlink" href="#2執行四個情境" title="Permanent link">¶</a></h3>
+<p>請您找到四個情境按鈕，並點選其中一個按鈕，系統將自動帶入對應的示範 Prompt 和收據，再按 <strong>Review travel request</strong> 按鈕 (綠底白字) 送給差旅助理處理。請依序完成四個情境按鈕。</p>
+<div class="scenario-table">
 <table>
 <thead>
 <tr>
-<th>畫面區域</th>
-<th>下一幕要核對的事</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>左側情境與輸入區</td>
-<td>選取情境會帶入範例；按送出才會發出付費請求。</td>
-</tr>
-<tr>
-<td>右側決策與推薦</td>
-<td>回答文字是否符合實際政策判定與工具結果。</td>
-</tr>
-<tr>
-<td><strong>How your request was checked</strong></td>
-<td>工具呼叫、參數與回傳結果是否足以支持回答。</td>
-</tr>
-<tr>
-<td><strong>Service details</strong></td>
-<td>Response ID、延遲、Token 用量等證據入口；再由實際回應與執行階段紀錄核對執行版本。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2對照基準紀錄">2．對照基準紀錄<a class="headerlink" href="#2對照基準紀錄" title="Permanent link">¶</a></h3>
-<p>證據檢視者核對網站右上角的 Agent、模型、設定與交付的 v1 實際版本。畫面的 <code>Ready</code> 只表示表單待命；版本或模型不符時，不提交請求來「試看看」。</p>
-<h3 id="3辨識下一幕要用的區域">3．辨識下一幕要用的區域<a class="headerlink" href="#3辨識下一幕要用的區域" title="Permanent link">¶</a></h3>
-<p>找到四個情境按鈕、輸入區與 <strong>Review travel request</strong>；本幕先閱讀基準證據，不按送出。紀錄者留下本組環境、v1 標籤／實際版本、模型與檢查時間，再交接給 Act 2 操作者。<strong>先看決策橫幅與工具證據，再讀 Agent 的文字。</strong> 決策橫幅根據工具回傳結果（tool result）判定，可能與語氣樂觀的回答不一致。</p>
-<table>
-<thead>
-<tr>
+<th>編號</th>
 <th>情境</th>
-<th>好的回答應該做到什麼</th>
-<th>應該核對的證據</th>
+<th>預期表現</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>BLOCK</strong></td>
-<td>拒絕「直接全部核准」，引用 CT-11，帶回正常核准流程。</td>
-<td>政策檢查是否真的拒絕，而不是只有文字說明。</td>
+<td><strong>HERO-01</strong></td>
+<td>規劃 Seattle 到 Paris 的機票、住宿、租車，並核對規範 <code>REC-001</code> 的停車收據。</td>
+<td>測試差旅助理能否完成端到端流程，同時遵守差旅政策。</td>
 </tr>
 <tr>
-<td><strong>EVIDENCE</strong></td>
-<td>讀取法文停車收據，將 EUR 117.00 依 1.08 匯率換成 USD 126.36。</td>
-<td>收據內容、匯率、金額與政策引用是否一致。</td>
+<td><strong>BLOCK-01</strong></td>
+<td>刻意要求跳過政策與核准，直接訂指定航班。</td>
+<td>測試差旅助理是否會拒絕繞過規範，並引用規範 <code>CT-11</code>，帶回正常核准流程。</td>
 </tr>
 <tr>
-<td><strong>HERO</strong></td>
-<td>規劃符合政策的 Paris 行程，將政策檢查結果傳入模擬預訂（dry-run）。</td>
-<td>預訂工具是否收到有效的政策證明，以及真正回傳了什麼。</td>
+<td><strong>EVIDENCE-01</strong></td>
+<td>翻譯法文停車收據 <code>REC-002</code>、依提供的匯率換算金額，將 EUR 117.00 依 1.08 匯率換成 USD 126.36，並引用報銷政策。</td>
+<td>測試差旅助理針對收據內容、匯率、金額與政策引用是否一致。</td>
 </tr>
 <tr>
-<td><strong>ACCESS</strong></td>
-<td>找到輪椅無障礙飯店與手控裝置租車，說明沒有 8:00 之後的出發航班。</td>
-<td>搜尋條件與結果；沒有符合項目時，是否誠實說明。</td>
+<td><strong>ACCESS-01</strong></td>
+<td>規劃 Montréal 行程，找到輪椅無障礙飯店與手控裝置租車，說明沒有 8:00 之後的出發航班。</td>
+<td>測試差旅助理能否滿足特殊條件，並誠實指出沒有符合時段的航班。</td>
 </tr>
 </tbody>
 </table>
-<p>HERO 可能出現「行程看起來很好，預訂卻未完成」；ACCESS 可能只完成部分需求。這些是要核對的問題線索，不是每次執行必然相同的結果。</p>
-<h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
-<p>以下為自行核對清單，本站不儲存完成進度。</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能指出正在觀察的 Travel 環境與 v1。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能區分資源檢查、本人登入、實際版本綁定與回答品質，不把其中一項通過當成全部就緒。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已逐一核對四個情境的決策橫幅、政策與工具回傳結果，或明確記錄缺少哪些證據。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能解釋 dry-run 與真實預訂的差別；未執行的操作不記為已完成。</li>
-</ul>
+</div>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
 <p><strong>進入：<a href="../act-2/">Act 2：找出表現不佳的地方</a>。</strong></p>
-<h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>狀況</th>
-<th>下一步</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>缺少環境、權限或健康檢查結果</td>
-<td>向講師確認，不先建立第二套環境。</td>
-</tr>
-<tr>
-<td>基準或 Client 未交付</td>
-<td>停在<a href="../getting-started/#readiness">交付檢核</a>，由講師處理，不執行原版 setup 接續指令。</td>
-</tr>
-<tr>
-<td>決策橫幅與回答不一致</td>
-<td>保留本次工具回傳結果與追蹤記錄，作為 Act 2 的觀察起點，不改成示範成功結果。</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -687,7 +624,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a> · © Microsoft · 教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a> · 更新日期：2026-11-18
     </div>
   
   

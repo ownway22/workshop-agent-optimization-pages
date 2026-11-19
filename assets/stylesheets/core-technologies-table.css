@@ -1,0 +1,40 @@
+#core-technologies-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#core-technologies-table :is(.md-typeset__scrollwrap, .md-typeset__table) {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+#core-technologies-table table {
+  display: grid;
+  width: 100%;
+  min-width: min-content;
+  max-width: none;
+  overflow: visible;
+  grid-template-columns: max-content max-content minmax(18em, 1fr) max-content;
+}
+
+#core-technologies-table :is(thead, tbody, tr) {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+#core-technologies-table tbody {
+  grid-auto-rows: 1fr;
+}
+
+#core-technologies-table :is(th, td) {
+  min-width: 0;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+#core-technologies-table :is(th, td):not(:nth-child(3)) {
+  white-space: nowrap;
+}

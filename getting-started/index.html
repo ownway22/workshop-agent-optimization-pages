@@ -46,6 +46,8 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../assets/stylesheets/core-technologies-table.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -341,10 +343,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checklist" class="md-nav__link">
+  <a href="#完成條件" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Checklist
+        完成條件
       
     </span>
   </a>
@@ -352,10 +354,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schedule" class="md-nav__link">
+  <a href="#步驟" class="md-nav__link">
     <span class="md-ellipsis">
       
-        準備開始
+        步驟
       
     </span>
   </a>
@@ -535,67 +537,50 @@
 
 <h1 id="課前準備">準備<a class="headerlink" href="#課前準備" title="Permanent link">¶</a></h1>
 <h2 id="環境說明">環境說明<a class="headerlink" href="#環境說明" title="Permanent link">¶</a></h2>
-<p>本場接續 Factory。<strong>沿用同一台 Ubuntu VM 與學員帳號，但使用第二場專用的 VS Code 啟動環境、工作目錄與本組 Foundry 專案。</strong> 不需要重新 Fork、建立 Codespaces 或重建上一場環境。</p>
+<p>接續 Agentic Factory (Lab 1)，沿用 <strong>同一台</strong> 遠端桌面與您的學員帳號，但切換至第二場專用的 Foundry prject 和 VS Code 工作目錄。 </p>
 <p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/workshop-env-architecture.png" data-title="Workshop 環境架構示意：學員筆電連接 Microsoft Foundry，操作員透過 Azure 遠端桌面的 VS Code 與 GitHub Copilot 操作 Foundry" data-desc-position="bottom"><img alt="Workshop 環境架構示意：學員筆電連接 Microsoft Foundry，操作員透過 Azure 遠端桌面的 VS Code 與 GitHub Copilot 操作 Foundry" class="workshop-architecture" decoding="async" height="941" loading="lazy" src="../assets/images/workshop-env-architecture.png" width="1672"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/workshop-env-architecture.png" data-title="workshop-env-architecture" data-desc-position="bottom"><img alt="workshop-env-architecture" class="workshop-architecture" decoding="async" height="941" loading="lazy" src="../assets/images/workshop-env-architecture.png" width="1672"></a></p>
 <p><br></p>
 <p><span id="readiness"></span></p>
-<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
+<h2 id="完成條件">完成條件<a class="headerlink" href="#完成條件" title="Permanent link">¶</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 進入原本被指派的 Ubuntu 遠端桌面，開啟第二場專用 VS Code 捷徑與 Terminal。</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 在第二場專案根目錄確認環境名稱。這個檢查只讀取已交付的非秘密變數：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">printf</span><span class="w"> </span><span class="s1">'組別：%s\n環境：%s\n'</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">WORKSHOP_GROUP_ID</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">"</span><span class="si">${</span><span class="nv">AZURE_ENV_NAME</span><span class="p">:?請先完成本組環境交付</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
-</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 進入指定的遠端桌面環境 (透過 RDP)，並開啟第二場專用的 Foundry prject。</li>
 </ul>
-<h2 id="schedule">準備開始<a class="headerlink" href="#schedule" title="Permanent link">¶</a></h2>
+<h2 id="步驟">步驟<a class="headerlink" href="#步驟" title="Permanent link">¶</a></h2>
+<p>確認本組環境後，沿著各 Act 編號的步驟操作並理解其中的意涵。</p>
+<div class="equal-three-col-table">
 <table>
 <thead>
 <tr>
-<th>時段</th>
-<th>小組要完成的事</th>
-<th>帶到下一步的紀錄</th>
+<th>頁面</th>
+<th>主軸</th>
+<th>核心技術</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>進場 10 分鐘</td>
-<td>完成準備與 Act 1 基準確認。</td>
-<td>分工、本組環境與 v1 實際版本。</td>
+<td><a href="../act-1/">Act 1：先讓它運作</a></td>
+<td>差旅助理能幫使用者完成哪些事？</td>
+<td><strong>Foundry Hosted Agent</strong></td>
 </tr>
 <tr>
-<td>Act 2，25 分鐘</td>
-<td>四個代表情境、追蹤記錄與 Insights 證據；只提交已放行工作。</td>
-<td>一項有追蹤記錄依據的問題，或明確阻礙。</td>
+<td><a href="../act-2/">Act 2：找出表現不佳的地方</a></td>
+<td>哪些失誤會造成重查、重做或交接不清？</td>
+<td><strong>Agent Insights</strong></td>
 </tr>
 <tr>
-<td>Act 3，35 分鐘</td>
-<td>審閱評分表、核對六題一次的 v1／v2 比較。</td>
-<td>同一評估題組的比較紀錄與採用建議。</td>
+<td><a href="../act-3/">Act 3：讓它更好</a></td>
+<td>更快或更省，是否犧牲了必要品質？</td>
+<td><strong>Rubric Evaluator、Model Router</strong></td>
 </tr>
 <tr>
-<td>Act 4，40 分鐘</td>
-<td>審查有效候選差異、核對重測結果。</td>
-<td>候選來源、實際版本與發布／保留理由。</td>
-</tr>
-<tr>
-<td>收尾 10 分鐘</td>
-<td>完成回顧及在途工作交接。</td>
-<td>兩分鐘摘要與下一個單步實驗。</td>
+<td><a href="../act-4/">Act 4：擴大改善規模</a></td>
+<td>如何多做嘗試，又保留人的掌控？</td>
+<td><strong>Agent Optimization</strong></td>
 </tr>
 </tbody>
 </table>
-<h3 id="分工交接與安全">分工、交接與安全<a class="headerlink" href="#分工交接與安全" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>當輪操作者：</strong>在主要 VM 執行本輪核准命令；同組一次只有一個重工作，不重複提交。</li>
-<li><strong>證據檢視者：</strong>核對追蹤記錄、回應 ID、實際版本與來源。</li>
-<li><strong>評分／指示檢視者：</strong>審查評分表或 Agent 行為指示差異，不自行改動共用評分依據。</li>
-<li><strong>紀錄者：</strong>保存題量、工作狀態、結果路徑與決策；切換角色時一併交接。</li>
-</ul>
-<p>其他組員可在個人 VM 閱讀受控匯出的非秘密結果及準備提案。付費工作依講師排程，不在多台 VM 複製可寫狀態後並行提交；若要更換主要 VM，先停止提交並完成狀態交接，由新操作者本人登入。</p>
+</div>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
 <p>進入：<a href="../act-1/">Act 1：先讓它運作</a>。</p>
 
@@ -633,7 +618,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a> · © Microsoft · 教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a> · 更新日期：2026-11-18
     </div>
   
   

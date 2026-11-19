@@ -125,6 +125,14 @@ body[data-md-color-scheme="slate"][data-md-color-primary="black"] {
   box-shadow: 0 0.15rem 0.5rem rgb(0 0 0 / 10%);
 }
 
+.md-typeset img.travel-workshop-02-instructions-diff-review,
+.md-typeset a.glightbox img.travel-workshop-02-instructions-diff-review {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
 .md-typeset .workshop-architecture {
   display: block;
   width: 80%;
@@ -208,4 +216,78 @@ body:has(.workshop-home-title) .md-nav--primary .md-nav__item--active > .md-nav_
 .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#next"]),
 body:has(.md-typeset h1[id^="act-"]) .md-nav--secondary .md-nav__item:has(> .md-nav__link[href="#troubleshooting"]) {
   display: none;
+}
+
+.md-typeset .scenario-table .md-typeset__table {
+  display: block;
+  width: 100%;
+}
+
+.md-typeset .scenario-table table {
+  display: table;
+  width: 100%;
+}
+
+.md-typeset .scenario-table th:first-child,
+.md-typeset .scenario-table td:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.md-typeset .scenario-table th:nth-child(2),
+.md-typeset .scenario-table td:nth-child(2),
+.md-typeset .scenario-table th:nth-child(3),
+.md-typeset .scenario-table td:nth-child(3) {
+  width: 50%;
+}
+
+.md-typeset .scenario-table tbody td {
+  height: 6.5rem;
+  vertical-align: middle;
+}
+
+.md-typeset .equal-three-col-table .md-typeset__table {
+  display: block;
+  width: 100%;
+}
+
+.md-typeset .equal-three-col-table table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.md-typeset .equal-three-col-table th,
+.md-typeset .equal-three-col-table td {
+  width: 33.3333%;
+  padding-inline: 1.5rem;
+}
+
+@media (max-width: 37.5em) {
+  .md-typeset .scenario-table th:first-child,
+  .md-typeset .scenario-table td:first-child {
+    width: auto;
+    white-space: normal;
+  }
+
+  .md-typeset .scenario-table th:nth-child(2),
+  .md-typeset .scenario-table td:nth-child(2),
+  .md-typeset .scenario-table th:nth-child(3),
+  .md-typeset .scenario-table td:nth-child(3) {
+    width: auto;
+  }
+
+  .md-typeset .scenario-table tbody td {
+    height: auto;
+  }
+
+  .md-typeset .equal-three-col-table table {
+    table-layout: auto;
+  }
+
+  .md-typeset .equal-three-col-table th,
+  .md-typeset .equal-three-col-table td {
+    width: auto;
+    padding-inline: 1rem;
+  }
 }

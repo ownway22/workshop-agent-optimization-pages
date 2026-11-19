@@ -46,6 +46,8 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../assets/stylesheets/core-technologies-table.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -422,17 +424,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        步驟
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -444,10 +435,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
+        步驟
       
     </span>
   </a>
@@ -455,10 +446,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#next" class="md-nav__link">
     <span class="md-ellipsis">
       
-        疑難排解
+        下一步
       
     </span>
   </a>
@@ -546,51 +537,23 @@
 
 <h1 id="act-3讓它更好">Act 3：讓它更好<a class="headerlink" href="#act-3讓它更好" title="Permanent link">¶</a></h1>
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>用同一份評分表（scorecard），衡量一次只改一件事的實驗，並保留有證據的進步。審閱 <strong>Rubric Evaluator</strong> 根據探索證據產生、且由講師凍結版本的評分表；用相同課堂題組比較 v1 與 <strong>Model Router</strong> v2。本場不執行模型微調或 Quality Router。</p>
-<h3 id="這一步在-hill-climbing-的位置">這一步在 hill climbing 的位置<a class="headerlink" href="#這一步在-hill-climbing-的位置" title="Permanent link">¶</a></h3>
-<p>這一步的業務意義，是支援「是否值得採用」的討論；不是把速度、Token 用量或平均分數的排名直接當成營運價值。</p>
-<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1審閱評分依據">1．審閱評分依據。<a class="headerlink" href="#1審閱評分依據" title="Permanent link">¶</a></h3>
-<p>在本組 Foundry 的 <strong>Evaluations → Evaluators</strong> 開啟講師交付的 evaluator ID 與版本，不只憑名稱判斷。評分檢視者將政策、查證、金額與誠實揭露面向各對應到業務指引或有效的 Insights／追蹤證據；缺少依據時先記錄，不自行改評分表。</p>
-<h3 id="2取得同一條件的結果">2．取得同一條件的結果<a class="headerlink" href="#2取得同一條件的結果" title="Permanent link">¶</a></h3>
-<p>本組放行後，當輪操作者取得六題一次的 v1／v2 評估；其餘組員核對題組、評分表、評分模型與回應實際版本。工作未完成或版本不符時停下來，不重送以補出比較表。</p>
-<h3 id="3寫下採用理由">3．寫下採用理由<a class="headerlink" href="#3寫下採用理由" title="Permanent link">¶</a></h3>
-<p>使用比較紀錄，留下品質、最弱面向、延遲、Token 用量與來源。每人提出一個支持或反對採用 v2 的證據；本幕不切換共用端點。</p>
+<p>用同一份評分表（scorecard）做評估，並且一次只改動一個設定，以保留有證據的進步。透過 <strong>Rubric Evaluator</strong>，對 Agent 做到量身訂做的情境化評估。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
-<p>以下為自行核對清單，本站不儲存完成進度。</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能將評分表的業務面向追溯至指引與 Insights。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已核對本次 Testing 題組、評分模型與評分表一致。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能指出 v2 相對 v1 的唯一變更，以及政策與最弱面向是否維持。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 已記下採用、保留或證據不足的理由；沒有將被隔離的 Router 結果列入比較。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 未把 Token 用量當成完整費用，也未把未執行的選做實驗當成自己的分數。</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 理解 Rubric evaluator 如何達到指定 agent 的情境化評估。</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 理解 Model Router 如何達到最佳化模型選取與推論。</li>
 </ul>
+<h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<h3 id="1使用-rubric-evaluator-建立-scorecard">1．使用 Rubric evaluator 建立 scorecard<a class="headerlink" href="#1使用-rubric-evaluator-建立-scorecard" title="Permanent link">¶</a></h3>
+<p>進入您的 Foundry project (<code>proj-opt-g0*</code>)，依序點選 <strong>Evaluations → Evaluator catalog → Caldova Travel Scorecard</strong>，以檢視評估 <strong>維度、描述、權重</strong>，對應實際情境的評估準則。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/rubric%20evaluator.png" data-title="rubric evaluator" data-desc-position="bottom"><img alt="rubric evaluator" class="rubric%20evaluator" decoding="async" height="941" loading="lazy" src="../assets/images/rubric%20evaluator.png" width="1672"></a></p>
+<p><br></p>
+<h3 id="2使用-model-router-達到最佳模型選取與推論">2．使用 Model Router 達到最佳模型選取與推論<a class="headerlink" href="#2使用-model-router-達到最佳模型選取與推論" title="Permanent link">¶</a></h3>
+<p>依序點選 <strong>Models → model router → details</strong>，檢視在 Instructions 相同、knowledge 相同、tool 也相同的前提下，由 Model Router 為每個使用者請求選擇最佳模型，本案以 <strong>gpt-5、gpt-5-mini、gpt-5-nano</strong> 模型為例說明。Model Router 最高可同時支援 <strong>29 款</strong> 前沿模型，包括 OpenAI、Claude、Grok、Meta、DeepSeek，和知名開源模型。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/model%20router.png" data-title="model router" data-desc-position="bottom"><img alt="model router" class="model%20router" decoding="async" height="941" loading="lazy" src="../assets/images/model%20router.png" width="1672"></a></p>
+<p><br></p>
 <h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
 <p>進入：<a href="../act-4/">Act 4：擴大改善規模</a>。</p>
-<h2 id="troubleshooting">疑難排解<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>狀況</th>
-<th>下一步</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>評分表有已知行為指示警告</td>
-<td>檢查實際面向與原指南的提示來源，不只為隱藏警告而重建。</td>
-</tr>
-<tr>
-<td>缺少標籤或分數</td>
-<td>確認該版本是否已建立、評分是否完成；不要自行猜版本編號。</td>
-</tr>
-<tr>
-<td>題量、評分表、評分模型或回應版本不一致</td>
-<td>不混算分數；保存原始證據，由講師確認後再重新驗證。</td>
-</tr>
-</tbody>
-</table>
-<p>詳細處理方式見<a href="../reference/troubleshooting/">疑難排解</a>。</p>
 
 
 
@@ -626,7 +589,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a> · © Microsoft · 教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a> · 更新日期：2026-11-18
     </div>
   
   

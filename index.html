@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="assets/stylesheets/core-technologies-table.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -323,10 +325,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#步驟" class="md-nav__link">
+  <a href="#核心技術" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步驟
+        核心技術
       
     </span>
   </a>
@@ -522,89 +524,67 @@
 
 <h1 class="travel-title workshop-home-title" id="操作導覽">導覽<a class="headerlink" href="#操作導覽" title="Permanent link">¶</a></h1>
 <h2 id="情境">情境<a class="headerlink" href="#情境" title="Permanent link">¶</a></h2>
-<p>Caldova 是一家虛構的製藥公司，需要一位遵守差旅政策、回答夠快、成本合理的旅遊助理。Contoso Travel 是替它建置助理的虛構供應商。使用 Microsoft Foundry 與 GitHub Copilot，讓旅遊助理從「能運作」走向「有證據地變好」。這次要解決三個問題：</p>
+<p>Caldova 是一家知名的製藥公司，公司內部提供員工使用 <strong>遵守差旅政策、回答夠快、成本合理</strong> 的差旅助理 agent 做報帳時使用。Contoso Travel 是替它建置助理的虛構供應商。AI 開發團隊使用 Microsoft Foundry 與 GitHub Copilot，讓差旅助理從「能運作」走向<strong>「有證據地變好」</strong>。差旅助理 agent 要同時滿足：</p>
 <ul>
-<li><strong>Krystal，旅客：</strong>需要實用、快速，而且不違反政策的差旅協助。</li>
-<li><strong>Andre，財務長：</strong>需要能說明品質、速度與費用取捨的數據。</li>
-<li><strong>Lydia，架構師：</strong>需要新模型推出後仍可重複使用的改善流程。</li>
+<li>旅客 Krystal：需要實用、快速，而且 <strong>不違反政策</strong> 的差旅協助。</li>
+<li>財務長 Andre：需要能說明 <strong>品質、速度與費用取捨</strong> 的數據。</li>
+<li>架構師 Lydia：需要新模型推出後，仍能 <strong>持續改善</strong> agent 的流程。</li>
 </ul>
-<p><br></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/travel-workshop-01-evidence-verification.png" data-title="travel-workshop-01-evidence-verification" data-desc-position="bottom"><img alt="travel-workshop-01-evidence-verification" class="travel-workshop-01-evidence-verification" fetchpriority="high" height="1100" loading="eager" src="assets/images/travel-workshop-01-evidence-verification.png" width="2200"></a></p>
 <p><br></p>
-<h3 id="四個-act-的操作路線">四個 Act 的操作路線<a class="headerlink" href="#四個-act-的操作路線" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>階段</th>
-<th>要回答的問題</th>
-<th>主要功能與產出</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="act-1/">Act 1：先讓它運作</a></td>
-<td>助理先能幫使用者完成哪件有用的事？</td>
-<td>課前由講師備妥 Hosted Agent <strong>v1</strong>；課堂確認本組基準與能力範圍。</td>
-</tr>
-<tr>
-<td><a href="act-2/">Act 2：找出表現不佳的地方</a></td>
-<td>哪些失誤會造成重查、重做或交接不清？</td>
-<td>收集重複提問的執行追蹤記錄（trace），讓 <strong>Insights</strong> 找出反覆問題。</td>
-</tr>
-<tr>
-<td><a href="act-3/">Act 3：讓它更好</a></td>
-<td>更快或更省，是否犧牲了必要品質？</td>
-<td>審閱固定的 <strong>Rubric Evaluator</strong> 評分表，用同一課堂題組比較 v1 與 <strong>Model Router</strong> v2。</td>
-</tr>
-<tr>
-<td><a href="act-4/">Act 4：擴大改善規模</a></td>
-<td>如何多做嘗試，又保留人的掌控？</td>
-<td><strong>Agent Optimizer</strong> 提出 Agent 行為指示（instructions）的候選方案，再由人審查、重新測試與決定是否上線。</td>
-</tr>
-</tbody>
-</table>
 <h2 id="目標">目標<a class="headerlink" href="#目標" title="Permanent link">¶</a></h2>
-<p>能力強的模型（model）是起點，不是永久答案。新模型、價格與需求會持續改變；我們需要的是能重複使用的改善方法，而不是一次猜中「最好的模型」。本課程的主軸是 <strong>hill climbing</strong>：</p>
+<p>能力強的前沿模型 <strong>是起點，不是永久答案</strong>。模型、價格與需求會持續改變；我們需要的是能<strong>重複使用的改善系統</strong>，而不是一次猜中「最好的模型」。本場的主軸是 <strong>Hill climbing</strong>：</p>
 <blockquote>
-<p><strong>觀察 → 理解 → 衡量 → 只改一件事 → 重新測試 → 決定 → 重複。</strong></p>
+<p><strong>觀察 → 理解 → 衡量 → 只改一件事 → 重新測試 → 決定 → 重複上述動作。</strong></p>
 </blockquote>
-<p>每次變更都用相同的 Testing 題目、評分表（scorecard）與評分模型（judge）比較。只有在差旅政策與品質維持水準時，更快或更便宜才算進步。</p>
-<ul>
-<li>用工具回傳結果（tool result）與執行追蹤記錄核對 Agent 的行為，不只看回答是否流暢。</li>
-<li>將 Insights 的發現轉成符合業務需求的評分表。</li>
-<li>區分模型、行為指示、工具與資料的變更，一次只測一件事。</li>
-<li>維持 Exploring、Training、Testing 題目的隔離，避免把熟悉的題目誤當成進步。</li>
-<li>讓 Agent Optimizer 多做嘗試，但保留人的審查與發布決策。</li>
-<li>將比較結果說成業務取捨，並提出一個回到公司後可驗證的小型改善假設。</li>
-</ul>
-<h2 id="步驟">步驟<a class="headerlink" href="#步驟" title="Permanent link">¶</a></h2>
-<p>先確認本組環境與分工，再沿各幕的編號步驟操作、核對畫面並保存結果。每組輪換當輪操作者、證據檢視者、評分／指示檢視者與紀錄者；不是所有人同時提交工作。兩小時的<a href="getting-started/#schedule">建議節奏</a>不保證雲端工作在固定時間完成。</p>
+<p>每次變更都用相同的測試題目 (golden testset)、評分表（scorecard）與評分模型（LLM-as-a-judge）比較。只有在差旅政策與品質維持水準時，<strong>更快或更便宜</strong>才算進步。</p>
+<h2 id="核心技術">核心技術<a class="headerlink" href="#核心技術" title="Permanent link">¶</a></h2>
+<p>整場課程圍繞四項 Microsoft Foundry 功能展開。</p>
+<div aria-label="核心技術比較表" id="core-technologies-table" role="region" tabindex="0">
 <table>
 <thead>
 <tr>
-<th>標示</th>
-<th>操作界線</th>
+<th>功能</th>
+<th>Act</th>
+<th>用途</th>
+<th>路徑</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>學員操作 · 必做</strong></td>
-<td>依主線核對本次結果與證據；未獲准呼叫模型時，閱讀講師提供的結果，不宣稱自己已執行。</td>
+<td><strong>Foundry Hosted Agent</strong></td>
+<td>Act 1：先讓它運作</td>
+<td>以 Microsoft Agent Framework 為框架，本機地端開發，雲端部署使用。</td>
+<td>Foundry → contoso-travel</td>
 </tr>
 <tr>
-<td><strong>講師課前準備</strong></td>
-<td>收合的環境建置與耗時作業，由講師或資源負責人事前完成。</td>
+<td><strong>Agent Insights</strong></td>
+<td>Act 2：找出表現不佳的地方</td>
+<td>讀取大量 trace，將反覆出現的問題歸納成淺顯易懂的發現。</td>
+<td>Foundry → contoso-travel → <strong>Insights</strong></td>
 </tr>
 <tr>
-<td><strong>原版延伸閱讀</strong></td>
-<td>Fine-tuning、Quality Router 等不屬於本場操作範圍，不在共用環境執行。</td>
+<td><strong>Rubric Evaluator</strong></td>
+<td>Act 3：讓它更好</td>
+<td>根據 v1 的 trace 與 Insights 發現草擬 scorecard，再以相同方式評分每個 version。</td>
+<td>Foundry → <strong>Evaluations</strong></td>
 </tr>
 <tr>
-<td><strong>需授權／可能計費</strong></td>
-<td>先確認身分、Travel 環境、費用與影響，不因教材有指令就執行。</td>
+<td><strong>Model Router</strong></td>
+<td>Act 3：讓它更好</td>
+<td>透過單一 deployment，為每個 request 選擇合適的 model。這就是 v2。</td>
+<td>Foundry → <strong>Models</strong> → <code>model-router</code></td>
+</tr>
+<tr>
+<td><strong>Agent Optimization</strong></td>
+<td>Act 4：擴大改善規模</td>
+<td>提議調整 instructions，並用 practice 題目試跑。由你審查並決定是否採用。</td>
+<td>Foundry → contoso-travel → <strong>Optimize</strong></td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>這些功能環環相扣——<strong>Insights</strong> 告訴你哪裡出了問題、<strong>Rubric Evaluator</strong> 將問題轉成量身訂做的評估方式、<strong>Model Router</strong> 提供自動化選取最佳模型、<strong>Agent Optimization</strong> 會大規模地找出潛在最佳 agent 設定。</p>
 <p><strong>下一步：<a href="getting-started/">準備</a>。</strong></p>
 
 
@@ -641,7 +621,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      教材版：standard-1 · 更新：2026-11-17<br> 課堂環境與操作權限由講師交付。改編自 Microsoft BRK330 · 教材採 CC BY-SA 4.0
+      本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a> · © Microsoft · 教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a> · 更新日期：2026-11-18
     </div>
   
   
