@@ -468,7 +468,51 @@
   <a href="#持續改善-agent-的循環" class="md-nav__link">
     <span class="md-ellipsis">
       
-        持續改善 Agent 的循環
+        四個 Act，串成一套改善方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#分數提高之後還要看什麼" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分數提高之後，還要看什麼？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#回到業務這些改善為誰而做" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        回到業務：這些改善為誰而做？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#持續改善先記住三件事" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        持續改善，先記住三件事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#把方法帶回自己的-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        把方法帶回自己的 Agent
       
     </span>
   </a>
@@ -512,21 +556,77 @@
 
 
 <h1 id="回顧與結論">結論<a class="headerlink" href="#回顧與結論" title="Permanent link">¶</a></h1>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/travel-workshop-02-instructions-diff-review.png" data-title="travel-workshop-02-instructions-diff-review" data-desc-position="bottom"><img alt="travel-workshop-02-instructions-diff-review" class="travel-workshop-02-instructions-diff-review" fetchpriority="high" height="1100" loading="eager" src="../../assets/images/travel-workshop-02-instructions-diff-review.png" width="2200"></a></p>
+<p>我們從操作差旅助理出發，查看 <strong>Agent 如何執行任務、問題留下什麼證據，以及如何評估改善方向</strong>。本場要帶走的不是「哪個模型最好」，而是讓 Agent 從「能運作」走向<strong>「有證據地變好」</strong>的方法。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/travel-workshop-02-instructions-diff-review.png" data-title="候選方案審查情境插畫：對照基準與候選方案，核對政策與工具證據" data-desc-position="bottom"><img alt="候選方案審查情境插畫：對照基準與候選方案，核對政策與工具證據" class="travel-workshop-02-instructions-diff-review" fetchpriority="high" height="1100" loading="eager" src="../../assets/images/travel-workshop-02-instructions-diff-review.png" width="2200"></a></p>
 <p><br></p>
-<h2 id="持續改善-agent-的循環">持續改善 Agent 的循環<a class="headerlink" href="#持續改善-agent-的循環" title="Permanent link">¶</a></h2>
-<p>這堂課要帶走的不是「哪個模型最好」，而是當模型、價格與業務需求改變時，仍能重複使用的 Agent 改善方法。</p>
+<h2 id="持續改善-agent-的循環">四個 Act，串成一套改善方法<a class="headerlink" href="#持續改善-agent-的循環" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>本場操作</th>
+<th>帶走的重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../act-1/">Act 1：先讓它運作</a></td>
+<td>執行四個差旅情境，查看決策橫幅與工具回傳結果。</td>
+<td>回答流暢，不代表政策判定與任務結果都正確。</td>
+</tr>
+<tr>
+<td><a href="../../act-2/">Act 2：找出表現不佳的地方</a></td>
+<td>查看 Trace，以及 Insights 的分析發現與改善建議。</td>
+<td>從「感覺有問題」，走向<strong>有證據、可行動</strong>的改善方向。</td>
+</tr>
+<tr>
+<td><a href="../../act-3/">Act 3：讓它更好</a></td>
+<td>檢視 Rubric Evaluator 的維度、描述與權重，以及 Model Router 設定。</td>
+<td><strong>好不好要依業務標準衡量</strong>，模型選擇也需要權衡品質、速度與費用。</td>
+</tr>
+<tr>
+<td><a href="../../act-4/">Act 4：擴大改善規模</a></td>
+<td>查看已完成的 Optimize Run，理解候選方案的 Score、Avg tokens 與 Avg latency。</td>
+<td>自動化可以增加嘗試，但候選仍需要<strong>人來判讀與驗證</strong>。</td>
+</tr>
+</tbody>
+</table>
+<p>這些畫面不是各自獨立的展示——<strong>Trace</strong> 讓我們追查一次回答，<strong>Insights</strong> 歸納反覆問題，<strong>Rubric Evaluator</strong> 定義衡量方式，<strong>Model Router</strong> 提供模型選擇的改善方向，<strong>Agent Optimizer</strong> 則加快候選方案的探索。</p>
+<h2 id="分數提高之後還要看什麼">分數提高之後，還要看什麼？<a class="headerlink" href="#分數提高之後還要看什麼" title="Permanent link">¶</a></h2>
+<p>Optimize 畫面中，分數較高的候選方案，也可能需要更多 Token 或更長的回應時間。<strong>分數最高，不等於最值得採用。</strong> 請一起看三件事：</p>
+<ul>
+<li><strong>品質</strong>：政策、證據與金額等重要面向，有沒有維持要求？平均分數不能掩蓋關鍵政策錯誤。</li>
+<li><strong>效率</strong>：品質的改善，是否值得增加的等待與用量？Token 用量是費用線索，不是完整帳單。</li>
+<li><strong>可信度</strong>：比較是否採用相同評估標準？正式採用前，還需要用未參與候選調整的代表性題目重新驗證，不能只看這次 Run 的排名。</li>
+</ul>
+<p>最佳化不是把單一分數推到最高，而是在<strong>不能犧牲的品質條件下，找到適合業務的取捨</strong>。</p>
+<h2 id="回到業務這些改善為誰而做">回到業務：這些改善為誰而做？<a class="headerlink" href="#回到業務這些改善為誰而做" title="Permanent link">¶</a></h2>
+<p>回到一開始的三位角色，他們需要的不只是更強的模型：</p>
+<ul>
+<li><strong>旅客 Krystal</strong>：需要符合政策、結果說清楚，而且能繼續處理的差旅協助，不只是完整的回答文字。</li>
+<li><strong>財務長 Andre</strong>：需要能說明品質、速度與費用取捨的數據，而不是「這個模型比較強」。</li>
+<li><strong>架構師 Lydia</strong>：需要可持續使用的改善流程。下次模型或需求改變時，不必重新猜一次。</li>
+</ul>
+<p>對半導體團隊，也可以用相同方法思考<strong>設備維護知識助理</strong>：回答能否追溯依據、資訊不足時是否說清楚、不同方案的品質與等待時間如何取捨。可以轉移的是這套驗證方法，不是差旅案例的規則或分數；這也不是本場已驗證的設備維護成效。</p>
+<h2 id="持續改善先記住三件事">持續改善，先記住三件事<a class="headerlink" href="#持續改善先記住三件事" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>先看證據，再決定改什麼</strong>：從 Trace 與 Insights 找出問題，不只憑一次回答或模型名稱做判斷。</li>
+<li><strong>用相同標準比較，一次只改一件事</strong>：知道起點、看清差異，再重新測試，才知道變更是否有幫助。</li>
+<li><strong>讓自動化多做嘗試，由人決定是否採用</strong>：候選方案是待驗證的提案，不是上線承諾。</li>
+</ol>
+<p>這就是本場的 Hill climbing：</p>
 <blockquote>
 <p><strong>觀察 → 理解 → 衡量 → 只改一件事 → 重新測試 → 決定 → 重複。</strong></p>
 </blockquote>
-<ul>
-<li><strong>先知道起點</strong>，保留基準版本的標籤、評分表與實際分數，不憑模型名稱推論品質。</li>
-<li><strong>一次只改一件事</strong>，比較模型、行為指示或工具／資料時，都要明確指出相對哪個版本做了什麼變更。</li>
-<li><strong>用同一個高度計</strong>，固定題集、重複次數、評分表版本與評分模型，並核對回應實際版本。課堂六題一次不能與完整 24 題三次混比，Agent Optimizer 的練習題分數也不是最終證明。</li>
-<li><strong>先守住政策與品質，再談速度與成本</strong>，除了平均分數，也看最弱面向、不同難度與多輪差異；Token 用量不是完整帳單。</li>
-<li><strong>人決定是否採用</strong>，建立版本、Foundry 顯示 <code>promoted</code>、切換使用中版本是不同的事。經過審查、Testing 與授權後，才決定是否讓預設流量使用候選方案。</li>
-</ul>
-<p>四項 Foundry 功能不是各自獨立的展示：<strong>Insights 找出問題，Rubric Evaluator 定義衡量方式，Model Router 提供一個可測試的變更，Agent Optimizer 則加快候選方案的探索。</strong> GitHub Copilot 協助閱讀證據、比較差異與串接可重複執行的工作流程，不代替人的核准。</p>
+<p>沒有勝過原版，也是一個有價值的結果——我們更清楚哪個方向不適合。<strong>真正要避免的是沒有衡量就採用。</strong></p>
+<h2 id="把方法帶回自己的-agent">把方法帶回自己的 Agent<a class="headerlink" href="#把方法帶回自己的-agent" title="Permanent link">¶</a></h2>
+<p>請用本場看到的畫面，想想三個問題：</p>
+<ol>
+<li>我能指出一項有 Trace 或 Insights 支持的問題嗎？</li>
+<li>我的 Agent 最不能犧牲的品質要求是什麼？</li>
+<li>面對分數較高的候選方案，我還會確認什麼才建議採用？</li>
+</ol>
+<p><strong>模型會變，需求也會變；真正值得帶走的，是用證據判斷、用一致標準比較，再由人決定的改善方法。</strong></p>
 <h2 id="授權">授權<a class="headerlink" href="#授權" title="Permanent link">¶</a></h2>
 <p>本教材改寫自 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot">Microsoft BRK330 原始教材</a>，© Microsoft；教材與原始投影片採 <a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/LICENSE-DOCS">CC BY-SA 4.0</a>。</p>
 

@@ -335,6 +335,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下一步
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -524,22 +535,22 @@
 
 <h1 class="travel-title workshop-home-title" id="操作導覽">導覽<a class="headerlink" href="#操作導覽" title="Permanent link">¶</a></h1>
 <h2 id="情境">情境<a class="headerlink" href="#情境" title="Permanent link">¶</a></h2>
-<p>Caldova 是一家知名的製藥公司，公司內部提供員工使用 <strong>遵守差旅政策、回答夠快、成本合理</strong> 的差旅助理 agent 做報帳時使用。Contoso Travel 是替它建置助理的虛構供應商。AI 開發團隊使用 Microsoft Foundry 與 GitHub Copilot，讓差旅助理從「能運作」走向<strong>「有證據地變好」</strong>。差旅助理 agent 要同時滿足：</p>
+<p>Caldova 是一家虛構的製藥公司，公司內部提供 <strong>遵守差旅政策、回答夠快、成本合理</strong> 的差旅助理 Agent，協助員工處理差旅規劃與費用核對。Contoso Travel 是替它建置助理的虛構供應商。AI 開發團隊使用 Microsoft Foundry 與 GitHub Copilot，讓差旅助理從「能運作」走向<strong>「有證據地變好」</strong>。差旅助理 Agent 要同時滿足：</p>
 <ul>
 <li>旅客 Krystal：需要實用、快速，而且 <strong>不違反政策</strong> 的差旅協助。</li>
 <li>財務長 Andre：需要能說明 <strong>品質、速度與費用取捨</strong> 的數據。</li>
-<li>架構師 Lydia：需要新模型推出後，仍能 <strong>持續改善</strong> agent 的流程。</li>
+<li>架構師 Lydia：需要新模型推出後，仍能 <strong>持續改善</strong> Agent 的流程。</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/travel-workshop-01-evidence-verification.png" data-title="travel-workshop-01-evidence-verification" data-desc-position="bottom"><img alt="travel-workshop-01-evidence-verification" class="travel-workshop-01-evidence-verification" fetchpriority="high" height="1100" loading="eager" src="assets/images/travel-workshop-01-evidence-verification.png" width="2200"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/images/travel-workshop-01-evidence-verification.png" data-title="差旅助理情境插畫：核對行程、收據與政策" data-desc-position="bottom"><img alt="差旅助理情境插畫：核對行程、收據與政策" class="travel-workshop-01-evidence-verification" fetchpriority="high" height="1100" loading="eager" src="assets/images/travel-workshop-01-evidence-verification.png" width="2200"></a></p>
 <p><br></p>
 <h2 id="目標">目標<a class="headerlink" href="#目標" title="Permanent link">¶</a></h2>
 <p>能力強的前沿模型 <strong>是起點，不是永久答案</strong>。模型、價格與需求會持續改變；我們需要的是能<strong>重複使用的改善系統</strong>，而不是一次猜中「最好的模型」。本場的主軸是 <strong>Hill climbing</strong>：</p>
 <blockquote>
 <p><strong>觀察 → 理解 → 衡量 → 只改一件事 → 重新測試 → 決定 → 重複上述動作。</strong></p>
 </blockquote>
-<p>每次變更都用相同的測試題目 (golden testset)、評分表（scorecard）與評分模型（LLM-as-a-judge）比較。只有在差旅政策與品質維持水準時，<strong>更快或更便宜</strong>才算進步。</p>
+<p>每次變更都用相同的測試題目（golden testset）、評分表（scorecard）與評分模型（LLM-as-a-judge）比較。只有在差旅政策與品質維持水準時，<strong>更快或更便宜</strong>才算進步。</p>
 <h2 id="核心技術">核心技術<a class="headerlink" href="#核心技術" title="Permanent link">¶</a></h2>
-<p>整場課程圍繞四項 Microsoft Foundry 功能展開。</p>
+<p>本場以 Foundry Hosted Agent 為執行基礎，搭配四項改善功能。</p>
 <div aria-label="核心技術比較表" id="core-technologies-table" role="region" tabindex="0">
 <table>
 <thead>
@@ -554,38 +565,39 @@
 <tr>
 <td><strong>Foundry Hosted Agent</strong></td>
 <td>Act 1：先讓它運作</td>
-<td>以 Microsoft Agent Framework 為框架，本機地端開發，雲端部署使用。</td>
-<td>Foundry → contoso-travel</td>
+<td>以 Microsoft Agent Framework 為框架，本機開發，部署至雲端使用。</td>
+<td>Foundry → <code>contoso-travel</code></td>
 </tr>
 <tr>
 <td><strong>Agent Insights</strong></td>
 <td>Act 2：找出表現不佳的地方</td>
-<td>讀取大量 trace，將反覆出現的問題歸納成淺顯易懂的發現。</td>
-<td>Foundry → contoso-travel → <strong>Insights</strong></td>
+<td>讀取大量追蹤記錄（Trace），將反覆出現的問題歸納成淺顯易懂的發現。</td>
+<td>Foundry → <code>contoso-travel</code> → <strong>Insights</strong></td>
 </tr>
 <tr>
 <td><strong>Rubric Evaluator</strong></td>
 <td>Act 3：讓它更好</td>
-<td>根據 v1 的 trace 與 Insights 發現草擬 scorecard，再以相同方式評分每個 version。</td>
+<td>根據 v1 的追蹤記錄與 Insights 發現草擬評分表，再以相同方式評分每個版本。</td>
 <td>Foundry → <strong>Evaluations</strong></td>
 </tr>
 <tr>
 <td><strong>Model Router</strong></td>
 <td>Act 3：讓它更好</td>
-<td>透過單一 deployment，為每個 request 選擇合適的 model。這就是 v2。</td>
+<td>透過單一部署，為每個請求選擇合適的模型。這就是 v2。</td>
 <td>Foundry → <strong>Models</strong> → <code>model-router</code></td>
 </tr>
 <tr>
-<td><strong>Agent Optimization</strong></td>
+<td><strong>Agent Optimizer</strong></td>
 <td>Act 4：擴大改善規模</td>
-<td>提議調整 instructions，並用 practice 題目試跑。由你審查並決定是否採用。</td>
-<td>Foundry → contoso-travel → <strong>Optimize</strong></td>
+<td>提議調整行為指示（instructions），並用練習題試跑。由你審查並決定是否採用。</td>
+<td>Foundry → <code>contoso-travel</code> → <strong>Optimize</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>這些功能環環相扣——<strong>Insights</strong> 告訴你哪裡出了問題、<strong>Rubric Evaluator</strong> 將問題轉成量身訂做的評估方式、<strong>Model Router</strong> 提供自動化選取最佳模型、<strong>Agent Optimization</strong> 會大規模地找出潛在最佳 agent 設定。</p>
-<p><strong>下一步：<a href="getting-started/">準備</a>。</strong></p>
+<p>這些功能環環相扣——<strong>Insights</strong> 告訴你哪裡出了問題、<strong>Rubric Evaluator</strong> 將問題轉成量身訂定的評估方式、<strong>Model Router</strong> 自動選擇合適的模型、<strong>Agent Optimizer</strong> 則探索值得驗證的 Agent 候選設定。</p>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p>進入：<a href="getting-started/">準備</a>。</p>
 
 
 

@@ -418,6 +418,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下一步
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -528,24 +539,25 @@
 <div id="這一幕的目標" class="anchor-alias"></div>
 
 <h2 id="goal">目標<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>我們站上山坡了——一次回答不能證明穩定性，多問問題才能找出真正的問題。我們將向同一個 v1 重複提出 Exploring 題目，收集執行追蹤記錄（trace），讓 <strong>Insights</strong> 歸納哪些問題經常發生。先知道問題在哪裡，才知道下一步值得改什麼。</p>
+<p>我們站上山坡了——一次回答不能證明穩定性，需要多筆記錄才能觀察反覆出現的問題。我們將查看 v1 的執行追蹤記錄（Trace），並透過 <strong>Insights</strong> 理解歷史紀錄中反覆出現的問題。先知道問題在哪裡，才知道下一步值得改什麼。</p>
 <h2 id="completion">完成條件<a class="headerlink" href="#completion" title="Permanent link">¶</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能指出 Act 1 執行的四個情境的 Trace ID。</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能理解 Insights 頁面中可具體行動的 recommended actions。</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> 能理解 Insights 頁面中的具體改善建議。</li>
 </ul>
 <h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1使用-foundry-trace-觀看歷史紀錄">1．使用 Foundry Trace 觀看歷史紀錄<a class="headerlink" href="#1使用-foundry-trace-觀看歷史紀錄" title="Permanent link">¶</a></h3>
-<p>進入您的 Foundry project (<code>proj-opt-g0*</code>)，依序點選 <strong>Microsoft Foundry → Agents → contoso-travel → Traces</strong>。檢視 Trace ID、狀態、Tokens、Estimated cost 等資訊。</p>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/Slide18.png" data-title="Slide18" data-desc-position="bottom"><img alt="Slide18" class="Slide18" decoding="async" height="941" loading="lazy" src="../assets/images/Slide18.png" width="1672"></a></p>
+<h3 id="1使用-foundry-trace-觀看歷史紀錄">1．使用 Foundry Traces 檢視歷史紀錄<a class="headerlink" href="#1使用-foundry-trace-觀看歷史紀錄" title="Permanent link">¶</a></h3>
+<p>進入您的 Foundry project（<code>proj-opt-g0*</code>），依序點選 <strong>Microsoft Foundry → Agents → <code>contoso-travel</code> → Traces</strong>。檢視 Trace ID、狀態、Tokens、Estimated cost 等資訊。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/Slide18.png" data-title="Foundry Traces 執行追蹤清單：查看 Trace ID、狀態、Token 用量與預估費用" data-desc-position="bottom"><img alt="Foundry Traces 執行追蹤清單：查看 Trace ID、狀態、Token 用量與預估費用" class="Slide18" decoding="async" height="941" loading="lazy" src="../assets/images/Slide18.png" width="1672"></a></p>
+<p><em>圖 1：原版 Traces 介面參考，非本組執行結果；請核對追蹤記錄、狀態與用量欄位的位置。<a href="https://github.com/microsoft/frontiertour27-BRK330-optimize-agents-with-microsoft-foundry-github-copilot/blob/main/delivery-resources/slides/Slide18.png">原始投影片</a>。</em></p>
 <p><br></p>
 <h3 id="2使用-insights-歸納出具體行動">2．使用 Insights 歸納出具體行動<a class="headerlink" href="#2使用-insights-歸納出具體行動" title="Permanent link">¶</a></h3>
-<p>點選 Insights 頁面，從歷史紀錄 (過去的反覆問題) 發現可具體行動的 recommended actions (畫面左側)。</p>
+<p>點選 Insights 頁面，選取左側的一項分析發現，再於右側查看說明、關聯 Trace 與 <strong>Proposed fix</strong>，理解可採取的改善行動。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/agent%20insights.png" data-title="Insights 分析介面：左側選取問題，右側查看說明、關聯追蹤記錄與 Proposed fix" data-desc-position="bottom"><img alt="Insights 分析介面：左側選取問題，右側查看說明、關聯追蹤記錄與 Proposed fix" class="agent%20insights" decoding="async" height="941" loading="lazy" src="../assets/images/agent%20insights.png" width="1672"></a></p>
+<p><em>圖 2：Insights 介面參考；請對照分析發現與改善建議，實際內容以本組畫面為準。</em></p>
 <p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/agent%20insights.png" data-title="agent insights" data-desc-position="bottom"><img alt="agent insights" class="agent%20insights" decoding="async" height="941" loading="lazy" src="../assets/images/agent%20insights.png" width="1672"></a></p>
-<p><br></p>
-<p><strong>下一步：<a href="../act-3/">Act 3：讓它更好</a>。</strong></p>
+<h2 id="next">下一步<a class="headerlink" href="#next" title="Permanent link">¶</a></h2>
+<p>進入：<a href="../act-3/">Act 3：讓它更好</a>。</p>
 
 
 
