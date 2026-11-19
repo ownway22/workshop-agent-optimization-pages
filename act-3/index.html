@@ -546,6 +546,53 @@
 <h2 id="steps">步驟<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
 <h3 id="1使用-rubric-evaluator-建立-scorecard">1．檢視 Rubric Evaluator 評分表<a class="headerlink" href="#1使用-rubric-evaluator-建立-scorecard" title="Permanent link">¶</a></h3>
 <p>進入您的 Foundry project（<code>proj-opt-g0*</code>），依序點選 <strong>Evaluations → Evaluator catalog → Caldova Travel Scorecard</strong>，檢視評估的<strong>維度、描述與權重</strong>，對照實際情境的評估準則。</p>
+<p>這份評分表以七個構面評估 contoso-travel Agent，涵蓋政策遵循、證據可信度與任務完成品質。<strong>權重越高，對整體評分的影響越大</strong>；正確拒絕或誠實說明無符合選項，也可以是良好表現。</p>
+<table>
+<thead>
+<tr>
+<th>構面名稱</th>
+<th style="text-align: right;">權重</th>
+<th>內容簡述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>政策判斷 <code>policy_decision</code></td>
+<td style="text-align: right;">9</td>
+<td>旅遊與報銷結論須符合工具提供的政策證據，不得推薦被禁止的選項或虛構核准。</td>
+</tr>
+<tr>
+<td>推薦前檢查 <code>checks_before_recommending</code></td>
+<td style="text-align: right;">8</td>
+<td>推薦行程、宣稱合規或可報銷前，須先取得相關政策檢查結果。</td>
+</tr>
+<tr>
+<td>證據可信度 <code>honest_evidence</code></td>
+<td style="text-align: right;">7</td>
+<td>航班、飯店、價格、收據與政策引用皆須有工具依據，不得捏造。</td>
+</tr>
+<tr>
+<td>數字一致性 <code>numbers_add_up</code></td>
+<td style="text-align: right;">7</td>
+<td>價格、稅費、住宿總額與匯率換算須正確一致；缺少數值時應明確說明。</td>
+</tr>
+<tr>
+<td>任務完成度 <code>finishes_the_job</code></td>
+<td style="text-align: right;">6</td>
+<td>回應所有需求並遵守時間、艙等及無障礙等限制；無法全部完成時，保留合規結果並說明缺口。</td>
+</tr>
+<tr>
+<td>回答清晰度 <code>clear_answer</code></td>
+<td style="text-align: right;">2</td>
+<td>讓使用者清楚理解結論、允許與禁止項目、限制及下一步，不以篇幅或固定格式評分。</td>
+</tr>
+<tr>
+<td>整體品質 <code>general_quality</code></td>
+<td style="text-align: right;">5</td>
+<td>補充評估上述構面未涵蓋的其他重要品質因素。</td>
+</tr>
+</tbody>
+</table>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/rubric%20evaluator.png" data-title="Rubric Evaluator 評分表：檢視評估維度、描述與權重" data-desc-position="bottom"><img alt="Rubric Evaluator 評分表：檢視評估維度、描述與權重" class="rubric%20evaluator" decoding="async" height="941" loading="lazy" src="../assets/images/rubric%20evaluator.png" width="1672"></a></p>
 <p><em>圖 1：Rubric Evaluator 介面參考。</em></p>
 <p><br></p>
